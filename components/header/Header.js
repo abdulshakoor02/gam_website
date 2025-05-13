@@ -67,12 +67,17 @@ const Header = (props) => {
                         <div className="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav className="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <li className="menu-item-has-children active"><Link onClick={ClickHandler} href="/"><span>Home</span></Link>
-                                        <ul className="submenu">
+                                    {/* <li className="menu-item-has-children active"> */}
+                                    <li className="active">
+                                            <Link onClick={ClickHandler} href="/"><span>Home</span></Link>
+
+                                        {/* <Link onClick={ClickHandler} href="/"><span>Home</span></Link> */}
+                                        {/* <ul className="submenu">
                                             <li><Link onClick={ClickHandler} href="/"><span>Immigration</span></Link></li>
                                             <li><Link onClick={ClickHandler} href="/home-studient-visa"><span>Studient Visa</span></Link></li>
                                             <li><Link onClick={ClickHandler} href="/home-travel-agency"><span>Travel Agency</span></Link></li>
-                                        </ul>
+                                        </ul> */}
+
                                     </li>
                                     <li className="menu-item-has-children">
                                         <Link onClick={ClickHandler} href="/"><span>Pages</span></Link>
