@@ -13,7 +13,6 @@ import eImg1 from "/public/images/visa/img_01.jpg";
 import eImg from "/public/images/visa/img_02.jpg";
 import eImg2 from "/public/images/icon/star.svg";
 import Image from "next/image";
-import Australia from "../../api/australia";
 
 const ServiceSinglePage = (props) => {
   const router = useRouter();
