@@ -14,7 +14,7 @@ const ServiceSection = (props) => {
                 <div className="service-wrap pos-rel">
                     <div className="service-img-wrap">
                         <div className="service-bg" style={{ backgroundImage: `url(${'/images/bg/service_bg.png'})` }}></div>
-                        <div className="service-img" style={{ backgroundImage: `url(${'/images/service/img_01.jpg'})` }}></div>
+                        <div className="service-img" style={{ backgroundImage: `url(${'/images/service/image_01.png'})` }}></div>
                     </div>
                     <div className="sec-title wow skewIn pt-120">
                         <h2 className="mb-60">Visa types and eligibility <br /> <span>assessment</span></h2>

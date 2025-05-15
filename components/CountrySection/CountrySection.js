@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CountryList from '../../api/country'
-import { TabContent, TabPane, Nav, NavItem, NavLink} from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 import Link from "next/link";
 import Image from 'next/image';
@@ -30,11 +30,13 @@ const CountrySection = (props) => {
                         <div className="sec-title">
                             <h2 className="mb-20 wow skewIn">Make Your Choice for the <br /> <span>Preferred Nation</span>
                             </h2>
+                            {/* <h2 className="mb-20 wow skewIn">Explore Immigration Destinations<br /> <span>Choose Your Preferred Country</span></h2> */}
                         </div>
                     </div>
                     <div className="col-lg-5 offset-lg-1">
                         <div className="sec-title mb-20">
-                            <p>Choosing the ideal destination for immigration is a pivotal decision that can shape the trajectory of your </p>
+                            {/* <p>Choosing the ideal destination for immigration is a pivotal decision that can shape the trajectory of your </p> */}
+                            <p>Discover visa opportunities and immigration services tailored for each country.</p>
                         </div>
                     </div>
                 </div>
