@@ -16,10 +16,21 @@ const TeamSection = (props) => {
                     <div className="row mt-none-30">
                         <div className="col-xl-6 mt-30">
                             <div className="sec-title mb-45">
-                                <h2 className="mb-40 wow skewIn">Our trusted immigration <br /> <span> support team</span>
+                                {/* <h2 className="mb-40 wow skewIn">Our trusted immigration <br /> <span> support team</span>
+                                </h2> */}
+                                <h2 className="mb-40 wow skewIn">
+                                    Canada Immigration Experts <br /> <span>you can trust</span>
                                 </h2>
-                                <p>At the heart of our commitment to providing exceptional immigration solutions
-                                    stands</p>
+                                {/* <p>At the heart of our commitment to providing exceptional immigration solutions
+                                    stands</p> */}
+                                <p>
+                                    Our Canada immigration consultants in Dubai simplify <br />
+                                    <span>your journey through the <strong>Canadian immigration process</strong>,</span> <br />
+                                    <span>including <strong>Express Entry</strong>, <strong>Canada PNP</strong>, and </span>
+                                    <span><strong>Permanent <br />Residency (PR)</strong>, ensuring expert guidance on </span>
+                                    <span><strong>eligibility</strong>, <br /><strong>ECA</strong>, and application support.</span>
+                                </p>
+
                             </div>
                         </div>
                         {Teams.slice(0, 6).map((team, tm) => (

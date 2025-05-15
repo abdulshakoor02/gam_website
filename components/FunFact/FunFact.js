@@ -10,30 +10,34 @@ import Image from 'next/image';
 const FunFact = [
     {
         title: '20',
-        subTitle: 'Visa Categories',
+        // subTitle: 'Visa Categories',
+        subTitle: 'Canada PR Visa Categories',
         symbol: '+',
         icon: sIcon1,
     },
     {
         title: '30',
-        subTitle: 'Visa Process',
+        // subTitle: 'Visa Process',
+        subTitle: 'Express Entry Applications',
         symbol: 'K+',
         icon: sIcon2,
-        style:'style-2',
+        style: 'style-2',
     },
     {
         title: '40',
-        subTitle: 'Successful Project',
+        // subTitle: 'Successful Project',
+        subTitle: 'Approved PNP Cases',
         symbol: 'K+',
         icon: sIcon3,
-        style:'style-3',
+        style: 'style-3',
     },
     {
         title: '180',
-        subTitle: 'Pro Consultants',
+        // subTitle: 'Pro Consultants',
+        subTitle: 'Immigration Experts in Dubai',
         symbol: 'K+',
         icon: sIcon4,
-        style:'style-4',
+        style: 'style-4',
     },
 
 
@@ -52,13 +56,21 @@ const FunFactSection = (props) => {
 
     return (
 
-        <section className="counter pt-120 pb-120 bg_img" style={{ backgroundImage: `url(${'/images/bg/counter_bg.jpg'})` }}>
+        <section className="counter pt-120 pb-120 bg_img" style={{ backgroundImage: `url(${'/images/bg/counter_image.png'})` }}>
             <div className="container">
                 <div className="sec-title mb-45">
-                    <h2 className="mb-40 wow skewIn">Discovering Our Biggest Successes: The Stories <br/> <span> Behind Our Great Achievements</span>
+                    {/* <h2 className="mb-40 wow skewIn">Discovering Our Biggest Successes: The Stories <br/> <span> Behind Our Great Achievements</span>
+                    </h2> */}
+                    <h2 className="mb-40 wow skewIn">
+                        Real Success Stories From Our <br />
+                        <span>Top Canada Immigration Consultants in Dubai</span>
                     </h2>
-                    <p>Embarking on a journey to reunite families, we recently had the privilege of assisting a <br/>
-                        couple in securing their spouse's visa. </p>
+                    {/* <p>Embarking on a journey to reunite families, we recently had the privilege of assisting a <br/>
+                        couple in securing their spouse's visa. </p> */}
+                    <p>
+                        From reuniting families to securing skilled worker PR, our consultants help you <br />
+                        navigate the Canada PR visa process with confidence and clarity.
+                    </p>
                 </div>
                 <div className="row">
                     <div className="col-lg-12">
@@ -66,11 +78,15 @@ const FunFactSection = (props) => {
                             {FunFact.map((funfact, fitem) => (
                                 <div className={`xb-item--item ul_li ${funfact.style}`} key={fitem}>
                                     <div className="xb-item--icon">
-                                        <Image src={funfact.icon} alt="" />
+                                        {/* <Image src={funfact.icon} alt="" /> */}
+                                        <Image src={funfact.icon} alt={funfact.subTitle} />
                                     </div>
                                     <div className="xb-item--holder">
-                                        <h2 className="xb-item--number"><span className="xbo"><CountUp end={funfact.title} enableScrollSpy /></span><span
-                                            className="suffix">{funfact.symbol}</span></h2>
+                                        <h2 className="xb-item--number">
+                                            <span className="xbo">
+                                                <CountUp end={funfact.title} enableScrollSpy />
+                                            </span><span
+                                                className="suffix">{funfact.symbol}</span></h2>
                                         <h5 className="xb-item--title">{funfact.subTitle}</h5>
                                     </div>
                                 </div>
