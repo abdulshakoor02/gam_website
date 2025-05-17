@@ -21,10 +21,13 @@ const ServiceSection = (props) => {
                     </div>
                     <div className="row justify-content-md-center mt-none-30">
                         {Services.slice(0, 6).map((service, srv) => (
-                            <div className={"col-lg-4 col-md-6 mt-30"} key={srv}>
+                            // <div className={"col-lg-4 col-md-6 mt-30"} key={srv}>
+                            <div className="col-lg-4 col-md-6 mt-30 d-flex" key={srv}>
                                 {service.title ?
-                                    <div className="xb-service">
-                                        <div className="xb-item--inner">
+                                    // <div className="xb-service">
+                                    <div className="xb-service w-100 d-flex flex-column">
+                                        {/* <div className="xb-item--inner"> */}
+                                        <div className="xb-item--inner h-100 d-flex flex-column">
                                             <div className={`xb-item--icon mb-50 ${service.iconColor}`}>
                                                 <Image src={service.sIcon} alt="" />
                                             </div>
