@@ -1,8 +1,11 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 
 const Hero = () => {
+  const customStyle = {};
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
@@ -60,20 +63,12 @@ const Hero = () => {
                   <div className="btns">
                     {/* <Link onClick={ClickHandler} className="thm-btn" href="/contact">Book Appointment</Link>
                                         <Link onClick={ClickHandler} className="thm-btn thm-btn--white" href="/about">Read Story</Link> */}
-                    <Link
-                      onClick={ClickHandler}
+                    <NoSSR
                       className="thm-btn"
-                      href="/contact"
-                    >
-                      Book Appointment
-                    </Link>
-                    <Link
-                      onClick={ClickHandler}
-                      className="thm-btn thm-btn--white"
-                      href="/about"
-                    >
-                      Why Choose Canada Immigration?
-                    </Link>
+                      customStyle={customStyle}
+                      modalState={false}
+                      buttonText="Book Appointment"
+                    />
                   </div>
                 </div>
               </Slide>
