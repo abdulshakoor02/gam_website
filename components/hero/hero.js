@@ -39,7 +39,6 @@ const Hero = () => {
               <Slide direction="up" triggerOnce={"false"} duration={1400}>
                 {/* <p>Expert Guidance for a
                                     Seamless Immigration Journey</p> */}
-<<<<<<< HEAD
                 <p>
                   Start your immigration journey to any country including
                   Canada, Australia, Germany, the UK, or the USA. Discover
@@ -47,13 +46,6 @@ const Hero = () => {
                   support.
                 </p>
                 {/* <p>
-=======
-                                <p>
-                                    {/* Start your journey from Dubai with trusted guidance on <strong>Canada Immigration via Express Entry</strong>, <strong>PNP</strong>, and other skilled migration routes. We assist with <strong>PR eligibility</strong>, <strong>Canada PR requirements</strong>, and timely submissions. */}
-                                    Start your journey from Dubai with expert help on <strong>Immigration via Express Entry</strong>, <strong>PNP</strong>, <strong>PR eligibility</strong>, and <strong>PR requirements</strong>.
-                                </p>
-                                {/* <p>
->>>>>>> 43fb771 (changed hero content)
                   From Canada PR via Express Entry to skilled migration to Australia,
                   UK, Germany, and more — our consultants simplify the global immigration process.
                   Check eligibility, understand visa requirements, and get expert support from start to finish.
