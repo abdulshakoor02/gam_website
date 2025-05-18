@@ -11,14 +11,14 @@ const FunFact = [
     {
         title: '20',
         // subTitle: 'Visa Categories',
-        subTitle: 'Canada PR Visa Categories',
+        subTitle: 'Canada Immigration Visa Categories',
         symbol: '+',
         icon: sIcon1,
     },
     {
         title: '30',
         // subTitle: 'Visa Process',
-        subTitle: 'Express Entry Applications',
+        subTitle: 'Express Entry Program Submissions',
         symbol: 'K+',
         icon: sIcon2,
         style: 'style-2',
@@ -26,7 +26,7 @@ const FunFact = [
     {
         title: '40',
         // subTitle: 'Successful Project',
-        subTitle: 'Approved PNP Cases',
+        subTitle: 'Approved Canada PNP Applications',
         symbol: 'K+',
         icon: sIcon3,
         style: 'style-3',
@@ -34,7 +34,7 @@ const FunFact = [
     {
         title: '180',
         // subTitle: 'Pro Consultants',
-        subTitle: 'Immigration Experts in Dubai',
+        subTitle: 'Immigration Consultants for Global PR',
         symbol: 'K+',
         icon: sIcon4,
         style: 'style-4',
@@ -62,14 +62,14 @@ const FunFactSection = (props) => {
                     {/* <h2 className="mb-40 wow skewIn">Discovering Our Biggest Successes: The Stories <br/> <span> Behind Our Great Achievements</span>
                     </h2> */}
                     <h2 className="mb-40 wow skewIn">
-                        Real Success Stories From Our <br />
-                        <span>Top Canada Immigration Consultants in Dubai</span>
+                        Real Success Stories from Around the World <br />
+                        <span>Led by Trusted PR & Immigration Advisors</span>
                     </h2>
                     {/* <p>Embarking on a journey to reunite families, we recently had the privilege of assisting a <br/>
                         couple in securing their spouse's visa. </p> */}
                     <p>
-                        From reuniting families to securing skilled worker PR, our consultants help you <br />
-                        navigate the Canada PR visa process with confidence and clarity.
+                        From Express Entry to PNP approvals and skilled worker pathways, our global team simplifies <br />
+                        the Canadian immigration process and beyond — helping clients from the UAE.
                     </p>
                 </div>
                 <div className="row">

@@ -19,18 +19,17 @@ const TeamSection = (props) => {
                                 {/* <h2 className="mb-40 wow skewIn">Our trusted immigration <br /> <span> support team</span>
                                 </h2> */}
                                 <h2 className="mb-40 wow skewIn">
-                                    Canada Immigration Experts <br /> <span>you can trust</span>
+                                    Immigration Consultants <br /> <span>You Can Trust</span>
                                 </h2>
                                 {/* <p>At the heart of our commitment to providing exceptional immigration solutions
                                     stands</p> */}
                                 <p>
-                                    Our Canada immigration consultants in Dubai simplify <br />
-                                    <span>your journey through the <strong>Canadian immigration process</strong>,</span> <br />
-                                    <span>including <strong>Express Entry</strong>, <strong>Canada PNP</strong>, and </span>
-                                    <span><strong>Permanent <br />Residency (PR)</strong>, ensuring expert guidance on </span>
-                                    <span><strong>eligibility</strong>, <br /><strong>ECA</strong>, and application support.</span>
+                                    Our team supports global immigration journeys — from <br />
+                                    <strong>Canada Immigration via Express Entry</strong> and <strong>Canada PNP</strong> <br />
+                                    to skilled worker PR worldwide. We assist with <strong>PR <br />
+                                    eligibility</strong>, <strong>Canada ECA</strong>, <strong>application documentation</strong>, <br />
+                                    and <strong>visa processing time</strong> across countries.
                                 </p>
-
                             </div>
                         </div>
                         {Teams.slice(0, 6).map((team, tm) => (
