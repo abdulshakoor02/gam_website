@@ -35,6 +35,7 @@ const ServiceSidebar = (props) => {
           ))}
         </ul>
       </div>
+      {/*
       <div className="widget">
         <h3>Downloads</h3>
         <ul className="widget-download ul_li_between list-unstyled">
@@ -70,6 +71,7 @@ const ServiceSidebar = (props) => {
           </li>
         </ul>
       </div>
+*/}
       <div
         className="widget widget-banner text-center bg_img"
         style={{ backgroundImage: `url(${"/images/bg/b_bg.jpg"})` }}
