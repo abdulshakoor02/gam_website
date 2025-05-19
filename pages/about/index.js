@@ -8,7 +8,8 @@ import StudentFunFact from "../../components/student-visa-components/StudentFunF
 import Teams from "../../api/team";
 import PartnerSection from "../../components/PartnerSection";
 import ContactSection from "../../components/ContactSection";
-import aboutImg from "/public/images/about/canadapassport.jpg";
+// import aboutImg from "/public/images/about/canadapassport.jpg";
+import aboutImg from "/public/images/about/about_image_discussion.jpg";
 import aboutImg2 from "/public/images/bg/fm1.jpg";
 import aboutImg3 from "/public/images/bg/fm2.jpg";
 import NewsLatter from "../../components/NewsLatter/NewsLatter";
@@ -27,23 +28,33 @@ const AboutUsPage = (props) => {
           <div className="row mb-40 align-items-center">
             <div className="col-lg-6">
               <div className="sec-title mb-20">
-                <h2 className="wow skewIn">
+                {/* <h2 className="wow skewIn">
                   Committed to Your Visa <br /> <span>Success - About us</span>
+                </h2> */}
+                <h2 className="wow skewIn">
+                  Committed to Global Immigration <br /> <span>Success – About Us</span>
                 </h2>
               </div>
             </div>
             <div className="col-lg-5 offset-lg-1">
               <div className="sec-title mb-20">
-                <p>
+                {/* <p>
                   We deliver budget-friendly visa solutions, removing financial
                   barriers from your journey. Our goal is to provide quality
                   services at reasonable rates.
+                </p> */}
+                <p>
+                  Based in Dubai, we provide affordable and transparent immigration
+                  services for PR, work, and study visas — including support for
+                  <strong>Canada Immigration via Express Entry</strong>,
+                  <strong>PNP</strong>, and <strong>visa eligibility</strong> assessments worldwide.
                 </p>
               </div>
             </div>
           </div>
           <div className="xb-about__img">
-            <Image src={aboutImg} alt="" />
+            {/* <Image src={aboutImg} alt="" /> */}
+            <Image src={aboutImg} alt="Global Immigration Visa Consulting" />
           </div>
         </div>
       </section>
@@ -68,11 +79,17 @@ const AboutUsPage = (props) => {
                     Guiding Your Path with Our <br />{" "}
                     <span>Immigration Mission</span>
                   </h2>
-                  <p>
+                  {/* <p>
                     We're here to simplify immigration complexities, guiding you
                     to success. Our mission is to unite families, open
                     opportunities, and make your journey enriching. Your dreams
                     are our focus on the path to a brighter future.
+                  </p> */}
+                  <p>
+                    Our mission is to help individuals and families across the 
+                    globe — including UAE residents — navigate complex immigration 
+                    laws and achieve permanent residency. Whether it’s <strong>Canada PR requirements</strong>, 
+                    <strong>Canada Express Entry</strong>, or <strong>visa documentation</strong>, we offer step-by-step support.
                   </p>
                 </div>
               </div>
@@ -92,11 +109,14 @@ const AboutUsPage = (props) => {
                   <h2 className="mb-20 wow skewIn" data-wow-delay="200ms">
                     Our Immigration <br /> <span>Service history</span>
                   </h2>
-                  <p>
+                  {/* <p>
                     Our history began with a vision to make the immigration
                     process smoother and more accessible for individuals and
                     families around the world. With a deep understanding of the
                     challenges that accompany moving to a new country,
+                  </p> */}
+                  <p>
+                    Our journey began with a goal to simplify the <strong> Immigration process</strong> and extend expert consulting across multiple countries. With knowledge in <strong> PR process</strong>, <strong>submission of PR application</strong>, and <strong>educational credential assessment (ECA)</strong>, we continue to empower global talent from Dubai and beyond.
                   </p>
                 </div>
               </div>
@@ -113,9 +133,12 @@ const AboutUsPage = (props) => {
             <h2 className="mb-40 wow skewIn">
               Our trusted immigration <br /> <span> support team</span>
             </h2>
-            <p>
+            {/* <p>
               At the heart of our commitment to providing exceptional <br />{" "}
               immigration solutions stands
+            </p> */}
+            <p>
+              Our consultants bring deep expertise in global PR programs, <br /> including <strong> Immigration Points Calculator</strong> and <strong>Express Entry eligibility</strong>, serving clients from Dubai and around the world.
             </p>
           </div>
           <div className="row mt-none-30">
