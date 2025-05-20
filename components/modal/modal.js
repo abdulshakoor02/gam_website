@@ -2,7 +2,6 @@ import * as React from "react";
 import {
   Card,
   Grid,
-  Box,
   Typography,
   Button,
   TextField,
@@ -13,6 +12,7 @@ import {
 } from "@mui/material";
 import uuid from "react-uuid";
 import { useRouter } from "next/router";
+import toast from "react-hot-toast";
 
 const style = {
   position: "absolute",
@@ -37,7 +37,117 @@ export default function TransitionsModal({
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [formValues, setFormValues] = React.useState({
+    fullname: "",
+    email: "",
+    destination: "",
+    ext: "",
+    mobile: "",
+    age: "",
+    education: "",
+  });
 
+  const [errors, setErrors] = React.useState({
+    fullname: "",
+    email: "",
+    destination: "",
+    ext: "",
+    mobile: "",
+    age: "",
+    education: "",
+  });
+
+  const handleForm = (e) => {
+    setFormValues((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+
+    var isValid = true;
+
+    const validationErrors = {
+      fullname: "",
+      email: "",
+      destination: "",
+      ext: "",
+      mobile: "",
+      age: "",
+      education: "",
+    };
+
+    for (const i in validationErrors) {
+      if (!formValues[i]) {
+        validationErrors[i] = `Valid ${i} is required`;
+        isValid = false;
+      }
+    }
+
+    if (!isValid) {
+      setErrors(validationErrors);
+
+      return;
+    }
+
+    setErrors(validationErrors);
+  };
+
+  const submitForm = async () => {
+    const validationErrors = {
+      fullname: "",
+      email: "",
+      destination: "",
+      ext: "",
+      mobile: "",
+      age: "",
+      education: "",
+    };
+
+    var isValid = true;
+
+    for (const i in validationErrors) {
+      if (!formValues[i]) {
+        validationErrors[i] = `Valid ${i} is required`;
+        isValid = false;
+      }
+    }
+
+    if (!isValid) {
+      setErrors(validationErrors);
+
+      return;
+    }
+
+    toast.success("capturing your details you be notified on success");
+    handleCloseModal();
+    let response = await fetch("/api/sendmail", {
+      method: "POST",
+      body: JSON.stringify(formValues),
+    });
+    response = await response.json();
+    toast.success(response.message);
+  };
+
+  const handleCloseModal = () => {
+    handleClose();
+    setErrors({
+      fullname: "",
+      email: "",
+      destination: "",
+      ext: "",
+      mobile: "",
+      age: "",
+      education: "",
+    });
+    setFormValues({
+      fullname: "",
+      email: "",
+      destination: "",
+      ext: "",
+      mobile: "",
+      age: "",
+      education: "",
+    });
+  };
   // Open modal on page load
   React.useEffect(() => {
     if (modalState && router.pathname === "/") {
@@ -111,9 +221,16 @@ export default function TransitionsModal({
                 }}
                 id={uuid()}
                 label="Full Name"
+                name="fullname"
+                value={formValues.fullname}
                 variant="outlined"
+                onChange={handleForm}
+                error={!!errors.fullname}
+                helperText={errors.fullname}
+                required
               />
               <TextField
+                required
                 sx={{
                   backgroundColor: "white",
                   minWidth: "270px",
@@ -122,9 +239,15 @@ export default function TransitionsModal({
                 }}
                 id={uuid()}
                 label="Email"
+                name="email"
+                value={formValues.email}
                 variant="outlined"
+                onChange={handleForm}
+                error={!!errors.email}
+                helperText={errors.email}
               />
               <TextField
+                required
                 select
                 sx={{
                   backgroundColor: "white",
@@ -134,7 +257,12 @@ export default function TransitionsModal({
                 }}
                 id={uuid()}
                 label="Destination"
+                name="destination"
+                value={formValues.destination}
                 variant="outlined"
+                onChange={handleForm}
+                error={!!errors.destination}
+                helperText={errors.destination}
               >
                 <MenuItem key={uuid()} value="Canada">
                   Canada
@@ -160,6 +288,7 @@ export default function TransitionsModal({
               </TextField>
               <Grid>
                 <TextField
+                  required
                   sx={{
                     backgroundColor: "white",
                     color: "#147c67",
@@ -170,9 +299,15 @@ export default function TransitionsModal({
                   }}
                   id={uuid()}
                   label="Ext"
+                  name="ext"
+                  value={formValues.ext}
                   variant="outlined"
+                  onChange={handleForm}
+                  error={!!errors.ext}
+                  helperText={errors.ext}
                 />
                 <TextField
+                  required
                   sx={{
                     backgroundColor: "white",
                     borderColor: "white",
@@ -182,11 +317,17 @@ export default function TransitionsModal({
                   }}
                   id={uuid()}
                   label="Mobile"
+                  name="mobile"
                   variant="outlined"
+                  value={formValues.mobile}
+                  onChange={handleForm}
+                  error={!!errors.mobile}
+                  helperText={errors.mobile}
                 />
               </Grid>
               <Grid>
                 <TextField
+                  required
                   select
                   sx={{
                     backgroundColor: "white",
@@ -198,7 +339,12 @@ export default function TransitionsModal({
                   }}
                   id={uuid()}
                   label="Age"
+                  name="age"
                   variant="outlined"
+                  value={formValues.age}
+                  onChange={handleForm}
+                  error={!!errors.age}
+                  helperText={errors.age}
                 >
                   <MenuItem key={uuid()} value="0-18">
                     0-18 years
@@ -211,6 +357,7 @@ export default function TransitionsModal({
                   </MenuItem>
                 </TextField>
                 <TextField
+                  required
                   select
                   sx={{
                     backgroundColor: "white",
@@ -221,7 +368,12 @@ export default function TransitionsModal({
                   }}
                   id={uuid()}
                   label="Education"
+                  name="education"
                   variant="outlined"
+                  value={formValues.education}
+                  onChange={handleForm}
+                  error={!!errors.education}
+                  helperText={errors.education}
                 >
                   <MenuItem key={uuid()} value="Diploma">
                     3 yrs Diploma
@@ -247,6 +399,7 @@ export default function TransitionsModal({
                   mb: "40px",
                 }}
                 variant="contained"
+                onClick={submitForm}
               >
                 Get Free Consultation
               </Button>

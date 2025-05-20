@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { Phone } from "@mui/icons-material";
 import Fab from "@mui/material/Fab";
 import { WhatsApp } from "@mui/icons-material";
+import { Toaster } from "react-hot-toast";
 
 const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 
@@ -28,6 +29,7 @@ const Scrollbar = () => {
   return (
     <div className="col-lg-12">
       <div className="header-menu">
+        <Toaster />
         <Fab
           sx={{
             "@media (min-width: 300px) and (max-width: 900px)": {
