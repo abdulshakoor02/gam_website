@@ -10,7 +10,8 @@ const PageTitle = (props) => {
       className="breadcrumb pos-rel bg_img"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url(${"/images/bg/passportvisa.jpg"})`,
+        // backgroundImage: `url(${"/images/bg/passportvisa.jpg"})`,
+        backgroundImage: `url(${"/images/bg/breadcrumb_bg1.jpg"})`,
       }}
     >
       <div className="container">

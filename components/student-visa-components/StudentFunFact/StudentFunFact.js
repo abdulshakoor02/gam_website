@@ -8,17 +8,20 @@ import aIcon2 from '/public/images/shape/c_shape2.png'
 const FunFact = [
     {
         title: '30',
-        subTitle: 'We Have Worked With Clients',
+        // subTitle: 'We Have Worked With Clients',
+        subTitle: 'Clients Served Globally Across 5 Continents',
         symbol: 'K',
     },
     {
         title: '100',
-        subTitle: 'Successful Visa Process Rate',
+        // subTitle: 'Successful Visa Process Rate',
+        subTitle: 'Success Rate in PR & Visa Submissions',
         symbol: '%',
     },
     {
         title: '1',
-        subTitle: 'Application Approval Processing Time',
+        // subTitle: 'Application Approval Processing Time',
+        subTitle: 'Application Review & Eligibility Check',
         symbol: 'DAY',
     }
 

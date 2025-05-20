@@ -12,8 +12,8 @@ import timg3 from '/public/images/team/image_03.png'
 import timg4 from '/public/images/team/image_04.png'
 import timg5 from '/public/images/team/image_05.png'
 import timg6 from '/public/images/team/image_06.png'
-import timg7 from '/public/images/team/img_07.png'
-import timg8 from '/public/images/team/img_08.png'
+import timg7 from '/public/images/team/image_07.png'
+import timg8 from '/public/images/team/image_08.png'
 
 
 const Teams = [
