@@ -1,6 +1,11 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import dynamic from "next/dynamic";
+import { Phone } from "@mui/icons-material";
+import Fab from "@mui/material/Fab";
+import { WhatsApp } from "@mui/icons-material";
+import { Toaster } from "react-hot-toast";
+
 const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 
 const Scrollbar = () => {
@@ -24,6 +29,35 @@ const Scrollbar = () => {
   return (
     <div className="col-lg-12">
       <div className="header-menu">
+        <Toaster />
+        <Fab
+          sx={{
+            "@media (min-width: 300px) and (max-width: 900px)": {
+              position: "relative",
+            },
+            position: "fixed",
+            top: 470,
+            left: 0,
+            zIndex: " 9999",
+            backgroundColor: "#47e621",
+          }}
+          aria-label="add"
+        >
+          <WhatsApp sx={{ color: "white" }} fontSize="large" />
+        </Fab>
+
+        <Fab
+          sx={{
+            position: "fixed",
+            top: 410,
+            left: 0,
+            zIndex: " 9999",
+          }}
+          color="primary"
+          aria-label="add"
+        >
+          <Phone fontSize="large" />
+        </Fab>
         <NoSSR
           customStyle={customStyle}
           className=""
