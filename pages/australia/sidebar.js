@@ -20,8 +20,10 @@ const ServiceSidebar = (props) => {
               {service.title ? (
                 <Link
                   onClick={ClickHandler}
-                  href={"/canada/[slug]"}
-                  as={`/canada/${service.slug}`}
+                  // href={"/canada/[slug]"}
+                  // as={`/canada/${service.slug}`}
+                  href={"/australia/[slug]"}
+                  as={`/australia/${service.slug}`}
                 >
                   {service.title}
                   <span>
@@ -35,7 +37,7 @@ const ServiceSidebar = (props) => {
           ))}
         </ul>
       </div>
-      <div className="widget">
+      {/* <div className="widget">
         <h3>Downloads</h3>
         <ul className="widget-download ul_li_between list-unstyled">
           <li>
@@ -69,7 +71,7 @@ const ServiceSidebar = (props) => {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div
         className="widget widget-banner text-center bg_img"
         style={{ backgroundImage: `url(${"/images/bg/b_bg.jpg"})` }}
