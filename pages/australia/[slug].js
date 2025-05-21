@@ -8,8 +8,10 @@ import ContactSection from "../../components/ContactSection";
 import Footer from "../../components/footer/Footer";
 import Australia from "../../api/australia";
 import ServiceSidebar from "./sidebar";
-import eImg1 from "/public/images/visa/img_01.jpg";
-import eImg from "/public/images/visa/img_02.jpg";
+// import eImg1 from "/public/images/visa/img_01.jpg";
+import eImg1 from "/public/images/visa/australia1.jpg";
+// import eImg from "/public/images/visa/img_02.jpg";
+import eImg from "/public/images/visa/australia_img_2.jpg";
 import eImg2 from "/public/images/icon/star.svg";
 import Image from "next/image";
 
