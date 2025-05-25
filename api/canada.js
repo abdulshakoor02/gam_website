@@ -40,7 +40,7 @@ Whether you're seeking better career opportunities, quality education, or an enh
     sIcon: swIcon2,
     iconColor: "color2",
     title: "Pilot Program",
-    slug: "Pilot Program",
+    slug: "pilot_program",
     description:
       "Developing your trade, setting up new sales channels Your visa is ready...",
     data1: `

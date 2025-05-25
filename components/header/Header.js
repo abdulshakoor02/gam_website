@@ -108,21 +108,111 @@ const Header = (props) => {
                       <span>Services</span>
                     </Link>
                     <ul className="submenu">
-                      <li>
+                      <li className="menu-item-has-children">
                         <Link
                           onClick={ClickHandler}
                           href="/canada/Express-Entry"
                         >
                           <span>Canada Visa</span>
                         </Link>
+
+                        <ul className="submenu">
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/canada/Express-Entry"
+                            >
+                              <span>Express Entry</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/canada/pilot_program"
+                            >
+                              <span>Pilot Program</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link onClick={ClickHandler} href="/canada/PNP">
+                              <span>Provincial Nomination Program</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/canada/Student-Visa"
+                            >
+                              <span>Student Visa</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/canada/Visit-Visa"
+                            >
+                              <span>Visit Visa</span>
+                            </Link>
+                          </li>
+                        </ul>
                       </li>
-                      <li>
+                      <li className="menu-item-has-children">
                         <Link
                           onClick={ClickHandler}
                           href="/australia/Express-Entry"
                         >
                           <span>Australia Visa</span>
                         </Link>
+
+                        <ul className="submenu">
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Express-Entry"
+                            >
+                              <span>Subclass 189/190</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Regional-State-Nomination"
+                            >
+                              <span>Regional State Nomination</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Global-Talent-Visa"
+                            >
+                              <span>Global Talent Visa</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Student-Visa"
+                            >
+                              <span>Student Visa</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Visit-Visa"
+                            >
+                              <span>Visit Visa</span>
+                            </Link>
+                          </li>
+                        </ul>
                       </li>
                       {/* 
 
