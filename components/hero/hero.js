@@ -3,6 +3,9 @@ import { Slide } from "react-awesome-reveal";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
+import GifBackground from "../gifBackground/gif";
+import places from "../../assets/lottie/places.json";
+import Lottie from "lottie-react";
 
 const Hero = () => {
   const customStyle = {};
@@ -18,7 +21,7 @@ const Hero = () => {
         backgroundSize: "cover",
         // width: 1920,
         // height: 755,
-        backgroundImage: `url(${"/images/bg/hero_bg.jpg"})`,
+        // backgroundImage: `url(${"/images/bg/hero_bg.jpg"})`,
       }}
     >
       <div className="container">
@@ -84,6 +87,18 @@ const Hero = () => {
                 </div>
               </Slide>
             </div>
+          </div>
+
+          <div className="col-xl-6 col-lg-7">
+            <Lottie
+              animationData={places}
+              loop={true}
+              play={true}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            />
           </div>
         </div>
       </div>

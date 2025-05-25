@@ -13,13 +13,16 @@ import {
 import uuid from "react-uuid";
 import { useRouter } from "next/router";
 import toast from "react-hot-toast";
+import GifBackground from "../gifBackground/gif";
+import Cf from "../../assets/lottie/contact-form.json";
+import { FullscreenExit } from "@mui/icons-material";
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 500,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -201,6 +204,7 @@ export default function TransitionsModal({
                 flexWrap: ["wrap", "nowrap"],
               }}
             >
+              <GifBackground data={Cf} />
               <Typography
                 sx={{
                   fontSize: "25px",
