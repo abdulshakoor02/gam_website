@@ -9,7 +9,7 @@ const ServiceSection = (props) => {
   };
 
   return (
-    <section className="visa type pb-135">
+    <section className="visa type pt-50 pb-135">
       <div className="container">
         <div className="service-wrap pos-rel">
           <div className="service-img-wrap">

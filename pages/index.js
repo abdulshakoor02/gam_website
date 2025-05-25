@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/hero";
 import Hero1 from "../components/homeSection1/hero";
+import Section2 from "../components/homeSection2/section2";
 import PartnerSection from "../components/PartnerSection";
 import ServiceSection from "../components/ServiceSection/ServiceSection";
 import About from "../components/about/about";
@@ -22,12 +23,13 @@ const HomePage = () => {
       <div>
         <Header />
         <Hero />
+        <Section2 />
         {/* <PartnerSection /> */}
         <ServiceSection />
         <About />
         <Hero1 />
         <FunFactSection />
-        <CountrySection />
+        {/* <CountrySection /> */}
         <TeamSection />
         <Testimonial />
         <FaqSection />
