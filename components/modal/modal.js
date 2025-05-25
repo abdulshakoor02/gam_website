@@ -15,7 +15,6 @@ import { useRouter } from "next/router";
 import toast from "react-hot-toast";
 import GifBackground from "../gifBackground/gif";
 import Cf from "../../assets/lottie/contact-form.json";
-import { FullscreenExit } from "@mui/icons-material";
 
 const style = {
   position: "absolute",

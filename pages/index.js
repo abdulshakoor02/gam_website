@@ -23,9 +23,9 @@ const HomePage = () => {
         <Header />
         <Hero />
         {/* <PartnerSection /> */}
-        <Hero1 />
         <ServiceSection />
         <About />
+        <Hero1 />
         <FunFactSection />
         <CountrySection />
         <TeamSection />

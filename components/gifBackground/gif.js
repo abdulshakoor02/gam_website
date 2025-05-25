@@ -6,10 +6,10 @@ const GifBackground = ({ data }) => {
   return (
     <Grid
       style={{
-        position: "fixed",
+        position: "absolute",
         width: "100%",
         height: "100%",
-        zIndex: -1, // To position the animation behind other elements
+        zIndex: "-1", // To position the animation behind other elements
       }}
     >
       <Lottie
