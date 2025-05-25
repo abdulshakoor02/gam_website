@@ -9,10 +9,15 @@ import icon6 from "/public/images/icon/arrow_down.svg";
 import logo from "/public/images/logo/logo.svg";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import metaData from "../../api/meta";
+import Head from "next/head";
 
 const Header = (props) => {
   const [searchActive, setSearchState] = useState(false);
   const [mobailActive, setMobailState] = useState(false);
+  const [meta, setMeta] = useState({ title: "", desc: "" });
+  const router = useRouter();
 
   const ClickHandler = () => {
     window.scrollTo(10, 0);
@@ -25,6 +30,11 @@ const Header = (props) => {
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {
+    if (metaData[router.pathname]) {
+      setMeta(metaData[router.pathname]);
+    } else {
+      setMeta(metaData["/"]);
+    }
     const handleScroll = () => {
       if (window.scrollY > 80) {
         setSticky(true);
@@ -43,6 +53,15 @@ const Header = (props) => {
 
   return (
     <header className="site-header header-style-one">
+      <Head>
+        <title>{meta.title || "Go Abroad Migration"}</title>
+        <meta
+          name="description"
+          content={
+            meta.description || "Immigration and visa consulting services."
+          }
+        />
+      </Head>
       <div
         className="header__top-wrap gray-bg"
         style={{ backgroundColor: "#b9ffed" }}
