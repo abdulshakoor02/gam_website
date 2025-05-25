@@ -111,7 +111,7 @@ Studying in Canada offers not only a world-class education but also a multicultu
     sIcon: swIcon4,
     iconColor: "color4",
     title: "Visit Visa",
-    slug: "Visit Visa",
+    slug: "Visit-Visa",
     description:
       "Expert Guidance for a Seamless Immigration Journey Expert Guidance...",
     data1: `

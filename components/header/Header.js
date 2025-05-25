@@ -43,7 +43,10 @@ const Header = (props) => {
 
   return (
     <header className="site-header header-style-one">
-      <div className="header__top-wrap gray-bg">
+      <div
+        className="header__top-wrap gray-bg"
+        style={{ backgroundColor: "#b9ffed" }}
+      >
         <div className="container">
           <div className="header__top ul_li_between">
             <div className="header__top-cta">
@@ -67,6 +70,7 @@ const Header = (props) => {
         className={`header__wrap stricky  ${
           isSticky ? "stricked-menu stricky-fixed" : ""
         }`}
+        style={{ backgroundColor: "#00cc99" }}
       >
         <div className="container">
           <div className="header__inner ul_li_between">
@@ -107,7 +111,10 @@ const Header = (props) => {
                     <Link onClick={ClickHandler} href="/">
                       <span>Services</span>
                     </Link>
-                    <ul className="submenu">
+                    <ul
+                      className="submenu"
+                      style={{ backgroundColor: "#00cc99" }}
+                    >
                       <li className="menu-item-has-children">
                         <Link
                           onClick={ClickHandler}
@@ -116,7 +123,10 @@ const Header = (props) => {
                           <span>Canada Visa</span>
                         </Link>
 
-                        <ul className="submenu">
+                        <ul
+                          className="submenu"
+                          style={{ backgroundColor: "#00cc99" }}
+                        >
                           <li>
                             <Link
                               onClick={ClickHandler}
@@ -167,7 +177,10 @@ const Header = (props) => {
                           <span>Australia Visa</span>
                         </Link>
 
-                        <ul className="submenu">
+                        <ul
+                          className="submenu"
+                          style={{ backgroundColor: "#00cc99" }}
+                        >
                           <li>
                             <Link
                               onClick={ClickHandler}
@@ -394,11 +407,14 @@ const Header = (props) => {
                             Arabic
                           </Link>
                         </li>
+                        {/*
+
                         <li>
                           <Link onClick={ClickHandler} href="/">
                             Bangla
                           </Link>
                         </li>
+*/}
                       </ul>
                     </li>
                   </ul>
