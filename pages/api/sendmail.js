@@ -3,8 +3,22 @@ import nodemailer from "nodemailer";
 export default async function handler(req, res) {
   try {
     if (req.method === "POST") {
-      const { fullname, email, destination, ext, mobile, age, education } =
-        JSON.parse(req.body);
+      const {
+        fullname,
+        email,
+        destination,
+        ext,
+        mobile,
+        age,
+        education,
+        message,
+      } = JSON.parse(req.body);
+
+      for (let i in req.body) {
+        if (req.body[i] == null) {
+          req.body[i] = "";
+        }
+      }
 
       // Create a Nodemailer transporter
       const transporter = nodemailer.createTransport({
@@ -30,7 +44,11 @@ export default async function handler(req, res) {
           html: `
                     <p><strong>Name:</strong> ${fullname}</p>
                     <p><strong>Email:</strong> ${email}</p>
-                    <p><strong>Message:</strong> ${ext}${mobile}</p>
+                    <p><strong>destination:</strong> ${destination}</p>
+                    <p><strong>Age:</strong> ${age}</p>
+                    <p><strong>Education:</strong> ${education}</p>
+                    <p><strong>Mobile:</strong> ${ext}${mobile}</p>
+                    <p><strong>Message:</strong> ${message}</p>
                 `,
           replyTo: email, // Set reply-to to the sender's email
         });
@@ -52,6 +70,7 @@ export default async function handler(req, res) {
       return res.status(405).end(`Method ${req.method} Not Allowed`);
     }
   } catch (err) {
+    console.log(err);
     res.setHeader("Allow", ["POST"]);
     return res.status(405).end(`${err}`);
   }

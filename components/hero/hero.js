@@ -8,7 +8,9 @@ import places from "../../assets/lottie/places.json";
 import Lottie from "lottie-react";
 
 const Hero = () => {
-  const customStyle = {};
+  const customStyle = {
+    backgroundColor: "#00cc99",
+  };
   const ClickHandler = () => {
     window.scrollTo(10, 0);
   };
@@ -78,10 +80,9 @@ const Hero = () => {
                     {/* <Link onClick={ClickHandler} className="thm-btn" href="/contact">Book Appointment</Link>
                                         <Link onClick={ClickHandler} className="thm-btn thm-btn--white" href="/about">Read Story</Link> */}
                     <NoSSR
-                      className="thm-btn"
                       customStyle={customStyle}
                       modalState={false}
-                      buttonText="Book Appointment"
+                      buttonText="Book Free Appointment"
                     />
                   </div>
                 </div>
