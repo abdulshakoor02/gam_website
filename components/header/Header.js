@@ -154,19 +154,99 @@ const Header = (props) => {
                               <span>Express Entry</span>
                             </Link>
                           </li>
-                          <li>
-                            <Link
-                              onClick={ClickHandler}
-                              href="/canada/pilot_program"
-                            >
+                          <li className="menu-item-has-children">
+                            <Link onClick={ClickHandler} href="/pilot/aipp">
                               <span>Pilot Program</span>
                             </Link>
+
+                            <ul
+                              className="submenu"
+                              style={{ backgroundColor: "#00cc99" }}
+                            >
+                              <li>
+                                <Link onClick={ClickHandler} href="/pilot/aipp">
+                                  <span>AIPP</span>
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link onClick={ClickHandler} href="/pilot/rnip">
+                                  <span>RNIP</span>
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/pilot/mcdii"
+                                >
+                                  <span>MCDII</span>
+                                </Link>
+                              </li>
+                            </ul>
                           </li>
 
-                          <li>
-                            <Link onClick={ClickHandler} href="/canada/PNP">
+                          <li className="menu-item-has-children">
+                            <Link onClick={ClickHandler} href="/pnp/alberta">
                               <span>Provincial Nomination Program</span>
                             </Link>
+
+                            <ul
+                              className="submenu"
+                              style={{ backgroundColor: "#00cc99" }}
+                            >
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/pnp/alberta"
+                                >
+                                  <span>Alberta PNP</span>
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link onClick={ClickHandler} href="/pnp/bc">
+                                  <span>British Columbia PNP</span>
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/pnp/manitoba"
+                                >
+                                  <span>Manitoba PNP</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link onClick={ClickHandler} href="/pnp/nb">
+                                  <span>New Brunswick PNP</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link onClick={ClickHandler} href="/pnp/ns">
+                                  <span>Nova Scotia PNP</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/pnp/ontario"
+                                >
+                                  <span>Ontario PNP</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link onClick={ClickHandler} href="/pnp/pei">
+                                  <span>Prince Edward Island PNP</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link onClick={ClickHandler} href="/pnp/sas">
+                                  <span>Saskatchewan PNP</span>
+                                </Link>
+                              </li>
+                            </ul>
                           </li>
 
                           <li>

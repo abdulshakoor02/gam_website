@@ -89,18 +89,6 @@ const Hero = () => {
               </Slide>
             </div>
           </div>
-
-          <div className="col-xl-6 col-lg-7">
-            <Lottie
-              animationData={places}
-              loop={true}
-              play={true}
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </div>
         </div>
       </div>
     </section>
