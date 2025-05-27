@@ -276,22 +276,35 @@ const Header = (props) => {
                             </Link>
                           </li>
 
-                          <li>
+                          <li className="menu-item-has-children">
                             <Link
                               onClick={ClickHandler}
                               href="/canada/ICT-Program"
                             >
-                              <span>ICT Program</span>
+                              <span>Business Program</span>
                             </Link>
-                          </li>
 
-                          <li>
-                            <Link
-                              onClick={ClickHandler}
-                              href="/canada/Start-up-Visa"
+                            <ul
+                              className="submenu"
+                              style={{ backgroundColor: "#00cc99" }}
                             >
-                              <span>Start-up Visa</span>
-                            </Link>
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/canada/ICT-Program"
+                                >
+                                  <span>ICT Program</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/canada/Start-up-Visa"
+                                >
+                                  <span>Start-up Visa</span>
+                                </Link>
+                              </li>
+                            </ul>
                           </li>
                         </ul>
                       </li>
