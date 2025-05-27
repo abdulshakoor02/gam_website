@@ -12,8 +12,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import metaData from "../../api/meta";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const NoSSR = dynamic(() => import("../callback/callback"), { ssr: false });
 
 const Header = (props) => {
+  const customStyle = {
+    backgroundColor: "#00cc99",
+  };
   const [searchActive, setSearchState] = useState(false);
   const [mobailActive, setMobailState] = useState(false);
   const [meta, setMeta] = useState({ title: "", desc: "" });
@@ -509,6 +515,14 @@ const Header = (props) => {
                     <Link onClick={ClickHandler} href="/contact">
                       <span>Contact</span>
                     </Link>
+                  </li>
+                  <li className="pt-35 pl-50">
+                    <NoSSR
+                      customStyle={customStyle}
+                      className=""
+                      modalState={false}
+                      buttonText="Callback"
+                    />
                   </li>
                 </ul>
               </nav>
