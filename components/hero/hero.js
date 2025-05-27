@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 import GifBackground from "../gifBackground/gif";
 import places from "../../assets/lottie/places.json";
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 
 const Hero = () => {
   const customStyle = {
@@ -23,7 +23,9 @@ const Hero = () => {
         backgroundSize: "cover",
         // width: 1920,
         // height: 755,
-        // backgroundImage: `url(${"/images/bg/hero_bg.jpg"})`,
+        width: "100%",
+        height: "100%",
+        backgroundImage: `url(${"/images/bg/full-shot-woman-taking-selfie.jpg"})`,
       }}
     >
       <div className="container">

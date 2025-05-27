@@ -266,6 +266,46 @@ const Header = (props) => {
                               <span>Visit Visa</span>
                             </Link>
                           </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/canada/Family-Sponsorship"
+                            >
+                              <span>Family Sponsorship</span>
+                            </Link>
+                          </li>
+
+                          <li className="menu-item-has-children">
+                            <Link
+                              onClick={ClickHandler}
+                              href="/canada/ICT-Program"
+                            >
+                              <span>Business Program</span>
+                            </Link>
+
+                            <ul
+                              className="submenu"
+                              style={{ backgroundColor: "#00cc99" }}
+                            >
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/canada/ICT-Program"
+                                >
+                                  <span>ICT Program</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  onClick={ClickHandler}
+                                  href="/canada/Start-up-Visa"
+                                >
+                                  <span>Start-up Visa</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </li>
                         </ul>
                       </li>
                       <li className="menu-item-has-children">
@@ -283,18 +323,27 @@ const Header = (props) => {
                           <li>
                             <Link
                               onClick={ClickHandler}
-                              href="/australia/Express-Entry"
+                              href="/australia/Skilled-Independent-189"
                             >
-                              <span>Subclass 189/190</span>
+                              <span>Skilled Independent 189</span>
                             </Link>
                           </li>
 
                           <li>
                             <Link
                               onClick={ClickHandler}
-                              href="/australia/Regional-State-Nomination"
+                              href="/australia/Skilled-Nominated-190"
                             >
-                              <span>Regional State Nomination</span>
+                              <span>Skilled Nominated 190</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Worked-Regional-Provisional"
+                            >
+                              <span>Skilled Work Regional Provisional 491</span>
                             </Link>
                           </li>
 
@@ -303,7 +352,16 @@ const Header = (props) => {
                               onClick={ClickHandler}
                               href="/australia/Global-Talent-Visa"
                             >
-                              <span>Global Talent Visa</span>
+                              <span>Global Talent Visa 858</span>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={ClickHandler}
+                              href="/australia/Spouse-Dependent-Visa"
+                            >
+                              <span>Spouse Dependent Visa</span>
                             </Link>
                           </li>
 
