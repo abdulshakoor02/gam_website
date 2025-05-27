@@ -7,7 +7,7 @@ const Canada = [
   {
     Id: "1",
     sIcon: swIcon1,
-    title: "Canada PR Through Express Entry",
+    title: "Canada PR via Express Entry",
     slug: "Express-Entry",
     description:
       "Visit new places to discover with a Tourist Visa. We deliver your documents ...",
@@ -64,6 +64,7 @@ Canada's Pilot Immigration Programs are specialized, time-limited initiatives de
         <strong>Home Care Worker Immigration Pilots:</strong> Launched on March 31, 2025, these pilots provide permanent residence pathways for foreign home care workers specializing in child care and home support. The programs include streams for workers already in Canada and for those applying from abroad, with specific eligibility criteria and application caps.
     </li>
 </ul>
+<br />
 
 <p>
 These pilot programs are tailored to support Canada's diverse economic and demographic objectives by facilitating the integration of skilled workers into communities that need them most.These pilot programs not only help meet specific labor shortages but also support the long-term development of smaller or underserved communities in Canada. They offer a more accessible path to permanent residency for candidates with moderate language skills, limited work experience, or unique qualifications suited to niche roles. By focusing on community involvement and employer-driven hiring, these pilots create a more personalized immigration experience—making them an excellent option for those looking to settle in welcoming, close-knit environments outside of major urban centers.
@@ -123,6 +124,72 @@ Studying in Canada offers not only a world-class education but also a multicultu
 Canada is known for its breathtaking natural beauty, multicultural cities, and warm hospitality, making it a top destination for tourists and visitors from around the world. Whether you're exploring iconic places like Niagara Falls, Banff National Park, or visiting family in cities like Toronto or Vancouver, a visit to Canada offers a memorable and enriching experience. Having a clear purpose for your trip and strong documentation increases your chances of approval, and following visa conditions ensures a smooth and enjoyable stay.
 </p>
 `,
+  },
+  {
+    Id: "6",
+    sIcon: swIcon4,
+    iconColor: "color4",
+    title: "Family Sponsorship",
+    slug: "Family-Sponsorship",
+    description:
+      "Reunite with your loved ones through Canada's Family Sponsorship programs, ensuring long-term settlement and family support.",
+    data1: `
+    <h1>Canada Family Sponsorship Program</h1>
+    <p>The Family Sponsorship program is a cornerstone of Canada’s immigration system, enabling Canadian citizens and permanent residents to bring their family members to live, work, and thrive in Canada. It reinforces the nation’s commitment to family unity and community growth.</p>
+    <ul>
+      <li><strong>Spousal and Common-law Sponsorship:</strong> Fast-tracked pathways for spouses and partners with processing times as short as 12 months.</li>
+      <li><strong>Dependent Children:</strong> Sponsorship of biological or adopted children under 22 years old, ensuring access to education, healthcare, and a bright future in Canada.</li>
+      <li><strong>Parents and Grandparents:</strong> The Parents and Grandparents Program (PGP) offers a pathway for family reunification, supported by financial requirements and a commitment of 20 years of financial support.</li>
+    </ul>
+    <br />
+    <p>Sponsors must demonstrate the financial capability to support their family members and commit to a period of sponsorship with specific obligations. This program emphasizes Canada’s inclusive, family-oriented immigration policies.</p>
+    <p>Reuniting families not only strengthens emotional bonds but also enhances Canada’s social fabric and labor market. Family members can contribute to the economy, access healthcare and education, and establish a stable, prosperous life in Canada.</p>
+    <p>Successful family sponsorship helps newcomers integrate into Canadian society more easily, fostering cultural diversity and creating vibrant communities. It also ensures that sponsored individuals have the support system they need to succeed, both socially and economically.</p>
+  `,
+  },
+  {
+    Id: "7",
+    sIcon: swIcon4,
+    iconColor: "color4",
+    title: "ICT Program",
+    slug: "ICT-Program",
+    description:
+      "Facilitate intra-company transfers to Canada for qualified employees under the International Mobility Program (IMP).",
+    data1: `
+    <h1>Canada Intra-Company Transfer (ICT) Program</h1>
+    <p>The ICT program offers a streamlined pathway for multinational companies to transfer essential employees to their Canadian branches or affiliates. It is part of Canada’s International Mobility Program (IMP), exempting employers from the Labor Market Impact Assessment (LMIA) requirement.</p>
+    <ul>
+      <li><strong>Eligible Employees:</strong> Executives, senior managers, and specialized knowledge workers who have worked for the company for at least one year.</li>
+      <li><strong>Eligibility Criteria:</strong> The Canadian entity must have a qualifying relationship with the foreign company, such as parent, subsidiary, or affiliate status.</li>
+      <li><strong>Work Permits:</strong> Issued for up to five years (for executives/managers) or seven years (for specialized workers), with renewals and extensions available.</li>
+    </ul>
+    <br />
+    <p>The ICT pathway supports business continuity, knowledge transfer, and corporate growth. It allows employees to gain international experience while contributing to Canada’s economy and innovation sectors.</p>
+    <p>Many ICT workers transition to permanent residency through programs like the Canadian Experience Class (CEC) under Express Entry, leveraging their Canadian work experience to secure PR status. This dual pathway strengthens Canada’s position as a hub for global talent and innovation.</p>
+    <p>In addition, the ICT program enhances a company’s ability to compete globally by facilitating seamless transfers of talent. It also supports the integration of international best practices into Canadian businesses, promoting innovation, and expanding global networks for future collaborations.</p>
+  `,
+  },
+  {
+    Id: "7",
+    sIcon: swIcon4,
+    iconColor: "color4",
+    title: "Start-up Visa",
+    slug: "Start-up-Visa",
+    description:
+      "A pathway to permanent residency for entrepreneurs launching innovative businesses in Canada.",
+    data1: `
+    <h1>Canada Start-up Visa Program</h1>
+    <p>The Start-up Visa (SUV) program is a pioneering immigration stream that targets visionary entrepreneurs seeking to establish innovative businesses in Canada. Designed to foster economic growth, it combines immigration and entrepreneurial support.</p>
+    <ul>
+      <li><strong>Key Requirements:</strong> Applicants must secure a Letter of Support from a designated organization—venture capital fund, angel investor group, or business incubator.</li>
+      <li><strong>Ownership:</strong> Up to five founders can apply, collectively holding at least 50% voting rights of the business.</li>
+      <li><strong>Financial and Language Proficiency:</strong> Applicants must meet minimum settlement fund requirements and demonstrate CLB 5 proficiency in English or French.</li>
+    </ul>
+    <br />
+    <p>The SUV program not only grants permanent residency to the principal applicant but also extends PR eligibility to family members. This holistic approach encourages entrepreneurship while enabling family unity in Canada.</p>
+    <p>Successful entrepreneurs benefit from access to a robust business ecosystem, mentorship opportunities, and global market connections. Canada’s supportive environment for start-ups, combined with its multicultural workforce, makes it an ideal launchpad for innovative ventures.</p>
+    <p>The Start-up Visa program positions Canada as a leader in global entrepreneurship. By fostering collaboration with investors and accelerators, entrepreneurs gain valuable support, while Canada reaps the benefits of job creation, innovation, and economic development. With PR pathways, start-ups can scale confidently in an internationally competitive market.</p>
+  `,
   },
 ];
 

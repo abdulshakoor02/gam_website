@@ -25,7 +25,7 @@ const Hero = () => {
         // height: 755,
         width: "100%",
         height: "100%",
-        backgroundImage: `url(${"/images/bg/home_hero_image2.jpg"})`,
+        backgroundImage: `url(${"/images/bg/full-shot-woman-taking-selfie.jpg"})`,
       }}
     >
       <div className="container">
