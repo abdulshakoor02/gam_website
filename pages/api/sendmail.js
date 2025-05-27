@@ -7,11 +7,11 @@ export default async function handler(req, res) {
         fullname,
         email,
         destination,
-        ext,
         mobile,
         age,
         education,
         message,
+        currentLocation,
       } = JSON.parse(req.body);
 
       for (let i in req.body) {
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
       try {
         await transporter.sendMail({
           from: process.env.MAIL_USERNAME, // Sender email address
-          to: email, // Recipient email address
+          to: "samunleash1@yahoo.com", // Recipient email address
           subject: `New Contact Form Submission from ${fullname}`,
           text: `
                     Name: ${fullname}
@@ -47,7 +47,8 @@ export default async function handler(req, res) {
                     <p><strong>destination:</strong> ${destination}</p>
                     <p><strong>Age:</strong> ${age}</p>
                     <p><strong>Education:</strong> ${education}</p>
-                    <p><strong>Mobile:</strong> ${ext}${mobile}</p>
+                    <p><strong>Mobile:</strong> ${mobile}</p>
+                    <p><strong>Mobile:</strong> ${currentLocation}</p>
                     <p><strong>Message:</strong> ${message}</p>
                 `,
           replyTo: email, // Set reply-to to the sender's email

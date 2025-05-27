@@ -9,6 +9,7 @@ import {
   Modal,
   Fade,
   Backdrop,
+  TextareaAutosize,
 } from "@mui/material";
 import uuid from "react-uuid";
 import { useRouter } from "next/router";
@@ -43,20 +44,21 @@ export default function TransitionsModal({
     fullname: "",
     email: "",
     destination: "",
-    ext: "",
     mobile: "",
     age: "",
     education: "",
+    currentLocation: "",
+    message: "",
   });
 
   const [errors, setErrors] = React.useState({
     fullname: "",
     email: "",
     destination: "",
-    ext: "",
     mobile: "",
     age: "",
     education: "",
+    currentLocation: "",
   });
 
   const handleForm = (e) => {
@@ -71,10 +73,10 @@ export default function TransitionsModal({
       fullname: "",
       email: "",
       destination: "",
-      ext: "",
       mobile: "",
       age: "",
       education: "",
+      currentLocation: "",
     };
 
     for (const i in validationErrors) {
@@ -98,10 +100,10 @@ export default function TransitionsModal({
       fullname: "",
       email: "",
       destination: "",
-      ext: "",
       mobile: "",
       age: "",
       education: "",
+      currentLocation: "",
     };
 
     var isValid = true;
@@ -135,19 +137,19 @@ export default function TransitionsModal({
       fullname: "",
       email: "",
       destination: "",
-      ext: "",
       mobile: "",
       age: "",
       education: "",
+      currentLocation: "",
     });
     setFormValues({
       fullname: "",
       email: "",
       destination: "",
-      ext: "",
       mobile: "",
       age: "",
       education: "",
+      currentLocation: "",
     });
   };
   // Open modal on page load
@@ -228,6 +230,7 @@ export default function TransitionsModal({
                 value={formValues.fullname}
                 variant="outlined"
                 onChange={handleForm}
+                onBlur={handleForm}
                 error={!!errors.fullname}
                 helperText={errors.fullname}
                 required
@@ -246,6 +249,7 @@ export default function TransitionsModal({
                 value={formValues.email}
                 variant="outlined"
                 onChange={handleForm}
+                onBlur={handleForm}
                 error={!!errors.email}
                 helperText={errors.email}
               />
@@ -264,6 +268,7 @@ export default function TransitionsModal({
                 value={formValues.destination}
                 variant="outlined"
                 onChange={handleForm}
+                onBlur={handleForm}
                 error={!!errors.destination}
                 helperText={errors.destination}
               >
@@ -289,45 +294,58 @@ export default function TransitionsModal({
                   Portugal
                 </MenuItem>
               </TextField>
-              <Grid>
-                <TextField
-                  required
-                  sx={{
-                    backgroundColor: "white",
-                    color: "#147c67",
-                    mt: "10px",
-                    maxWidth: "90px",
-                    mt: "10px",
-                    mr: "2px",
-                  }}
-                  id={uuid()}
-                  label="Ext"
-                  name="ext"
-                  value={formValues.ext}
-                  variant="outlined"
-                  onChange={handleForm}
-                  error={!!errors.ext}
-                  helperText={errors.ext}
-                />
-                <TextField
-                  required
-                  sx={{
-                    backgroundColor: "white",
-                    borderColor: "white",
-                    maxWidth: "180px",
-                    color: "white",
-                    mt: "10px",
-                  }}
-                  id={uuid()}
-                  label="Mobile"
-                  name="mobile"
-                  variant="outlined"
-                  value={formValues.mobile}
-                  onChange={handleForm}
-                  error={!!errors.mobile}
-                  helperText={errors.mobile}
-                />
-              </Grid>
+              <TextField
+                required
+                sx={{
+                  backgroundColor: "white",
+                  minWidth: "270px",
+                  color: "#147c67",
+                  mt: "10px",
+                }}
+                id={uuid()}
+                label="Mobile"
+                name="mobile"
+                value={formValues.mobile}
+                variant="outlined"
+                onChange={handleForm}
+                onBlur={handleForm}
+                error={!!errors.mobile}
+                helperText={errors.mobile}
+              />
+              <TextField
+                required
+                sx={{
+                  backgroundColor: "white",
+                  minWidth: "270px",
+                  color: "#147c67",
+                  mt: "10px",
+                }}
+                id={uuid()}
+                label="Current Location"
+                name="currentLocation"
+                value={formValues.currentLocation}
+                variant="outlined"
+                onChange={handleForm}
+                onBlur={handleForm}
+                error={!!errors.currentLocation}
+                helperText={errors.currentLocation}
+              />
+              <TextField
+                multiline
+                sx={{
+                  backgroundColor: "white",
+                  minWidth: "270px",
+                  color: "#147c67",
+                  mt: "10px",
+                }}
+                id={uuid()}
+                label="Message"
+                name="message"
+                value={formValues.message}
+                variant="outlined"
+                onChange={handleForm}
+                onBlur={handleForm}
+              />
               <Grid>
                 <TextField
                   required
@@ -346,6 +364,7 @@ export default function TransitionsModal({
                   variant="outlined"
                   value={formValues.age}
                   onChange={handleForm}
+                  onBlur={handleForm}
                   error={!!errors.age}
                   helperText={errors.age}
                 >
@@ -375,6 +394,7 @@ export default function TransitionsModal({
                   variant="outlined"
                   value={formValues.education}
                   onChange={handleForm}
+                  onBlur={handleForm}
                   error={!!errors.education}
                   helperText={errors.education}
                 >
