@@ -6,7 +6,7 @@ import icon3 from "/public/images/icon/location.svg";
 import icon4 from "/public/images/icon/search.svg";
 import icon5 from "/public/images/icon/us_flag.png";
 import icon6 from "/public/images/icon/arrow_down.svg";
-import logo from "/public/images/logo/logo.svg";
+import logo from "/public/images/logo/gam_logo.jpeg";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -101,7 +101,7 @@ const Header = (props) => {
           <div className="header__inner ul_li_between">
             <div className="header__logo">
               <Link onClick={ClickHandler} href="/">
-                <Image src={logo} alt="" />
+                <Image src={logo} height={80} width={100} alt="" />
               </Link>
             </div>
             <div className="main-menu__wrap ul_li navbar navbar-expand-lg">
