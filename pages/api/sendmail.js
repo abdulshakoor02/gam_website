@@ -48,7 +48,7 @@ export default async function handler(req, res) {
                     <p><strong>Age:</strong> ${age}</p>
                     <p><strong>Education:</strong> ${education}</p>
                     <p><strong>Mobile:</strong> ${mobile}</p>
-                    <p><strong>Mobile:</strong> ${currentLocation}</p>
+                    <p><strong>Current Location:</strong> ${currentLocation}</p>
                     <p><strong>Message:</strong> ${message}</p>
                 `,
           replyTo: email, // Set reply-to to the sender's email
