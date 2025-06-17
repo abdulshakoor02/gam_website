@@ -464,7 +464,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 			}
 			&.color-3 {
 				&::before {
-					background-color: var(--color-primary); /* MODIFIED */
+					background-color: var(--color-primary);
 				}
 				.xb-item--icon {
 					background-color: rgba(0, 204, 153, 0.1);

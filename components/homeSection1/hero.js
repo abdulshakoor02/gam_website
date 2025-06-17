@@ -17,7 +17,7 @@ const Hero = () => {
     // <section className="hero hero__style-one bg_img" style={{ backgroundImage: `url(${'/images/bg/hero_bg.jpg'})` }}>
     <section
       style={{
-        backgroundColor: "#00cc99",
+        background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)',
         backgroundSize: "cover",
         // width: 1920,
         // height: 755,

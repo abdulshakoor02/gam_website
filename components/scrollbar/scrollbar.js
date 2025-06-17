@@ -19,7 +19,7 @@ const Scrollbar = () => {
     zIndex: " 9999",
   };
   const customStyle = {
-    backgroundColor: "#00cc99",
+    backgroundColor: "#dc8a64",
     writingMode: "vertical-rl",
     textOrientation: "upright",
     whiteSpace: "nowrap",

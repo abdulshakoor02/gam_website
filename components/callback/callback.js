@@ -217,7 +217,7 @@ export default function TransitionsModal({
               />
               <Button
                 sx={{
-                  backgroundColor: "#00cc99",
+                  backgroundColor: '#dc8a64',
                   borderColor: "white",
                   minWidth: "270px",
                   color: "white",

@@ -414,7 +414,7 @@ export default function TransitionsModal({
               </Grid>
               <Button
                 sx={{
-                  backgroundColor: "#00cc99",
+                  backgroundColor: '#dc8a64',
                   borderColor: "white",
                   minWidth: "270px",
                   color: "white",

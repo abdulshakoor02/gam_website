@@ -18,7 +18,7 @@ const NoSSR = dynamic(() => import("../callback/callback"), { ssr: false });
 
 const Header = (props) => {
   const customStyle = {
-    backgroundColor: "#00cc99",
+    backgroundColor: "#dc8a64",
   };
   const [searchActive, setSearchState] = useState(false);
   const [mobailActive, setMobailState] = useState(false);
@@ -70,7 +70,7 @@ const Header = (props) => {
       </Head>
       <div
         className="header__top-wrap gray-bg"
-        style={{ backgroundColor: "#b9ffed" }}
+        style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
       >
         <div className="container">
           <div className="header__top ul_li_between">
@@ -95,7 +95,7 @@ const Header = (props) => {
         className={`header__wrap stricky  ${
           isSticky ? "stricked-menu stricky-fixed" : ""
         }`}
-        style={{ backgroundColor: "#00cc99" }}
+        style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
       >
         <div className="container">
           <div className="header__inner ul_li_between">
@@ -111,7 +111,7 @@ const Header = (props) => {
                     <Link onClick={ClickHandler} href="/">
                       <span>Home</span>
                     </Link>
-                    {/* 
+                    {/*
 
                     <ul className="submenu">
                       <li>
@@ -138,7 +138,7 @@ const Header = (props) => {
                     </Link>
                     <ul
                       className="submenu"
-                      style={{ backgroundColor: "#00cc99" }}
+                      style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
                     >
                       <li className="menu-item-has-children">
                         <Link
@@ -150,7 +150,7 @@ const Header = (props) => {
 
                         <ul
                           className="submenu"
-                          style={{ backgroundColor: "#00cc99" }}
+                          style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
                         >
                           <li>
                             <Link
@@ -167,7 +167,7 @@ const Header = (props) => {
 
                             <ul
                               className="submenu"
-                              style={{ backgroundColor: "#00cc99" }}
+                              style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
                             >
                               <li>
                                 <Link onClick={ClickHandler} href="/pilot/aipp">
@@ -199,7 +199,7 @@ const Header = (props) => {
 
                             <ul
                               className="submenu"
-                              style={{ backgroundColor: "#00cc99" }}
+                              style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
                             >
                               <li>
                                 <Link
@@ -292,7 +292,7 @@ const Header = (props) => {
 
                             <ul
                               className="submenu"
-                              style={{ backgroundColor: "#00cc99" }}
+                              style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
                             >
                               <li>
                                 <Link
@@ -324,7 +324,7 @@ const Header = (props) => {
 
                         <ul
                           className="submenu"
-                          style={{ backgroundColor: "#00cc99" }}
+                          style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
                         >
                           <li>
                             <Link
@@ -390,7 +390,7 @@ const Header = (props) => {
                           </li>
                         </ul>
                       </li>
-                      {/* 
+                      {/*
 
                       <li>
                         <Link onClick={ClickHandler} href="/services">
@@ -548,7 +548,7 @@ const Header = (props) => {
                   Search
                 </span>
               </li>
- 
+
 */}
               <li>
                 <div className="header__language">
