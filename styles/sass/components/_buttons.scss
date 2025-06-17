@@ -32,7 +32,7 @@
         padding: 20px 50px 21px;
         @include border-radius(91px);
         &:hover {
-            background-color: #09AD84;
+            background-color: var(--color-primary);
             span {
                 @include transform(translateX(7px));
             }
