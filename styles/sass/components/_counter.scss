@@ -65,7 +65,7 @@
             }
             &.style-3 {
                 &::before {
-                    background-color: #00CC99;
+                    background-color: var(--color-primary); /* MODIFIED */
                 }
                 .xb-item--icon {
                     background-color: rgba(0, 204, 153, 0.1);
