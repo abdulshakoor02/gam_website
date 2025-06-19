@@ -5,7 +5,14 @@ import Scrollbar from '../../components/scrollbar/scrollbar'
 import ContactSection from '../../components/ContactSection';
 import NewsLatter from '../../components/NewsLatter/NewsLatter';
 import Footer from '../../components/footer/Footer';
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import dynamic from 'next/dynamic';
+import Masonry from 'react-responsive-masonry'; // Keep this as it's the default export
+
+const ResponsiveMasonryWithNoSSR = dynamic(
+  () => import('react-responsive-masonry').then(mod => mod.ResponsiveMasonry),
+  { ssr: false }
+);
 import tsm1 from '/public/images/testimonial/avatar1.png'
 import tsm2 from '/public/images/testimonial/avatar2.png'
 import tsm3 from '/public/images/testimonial/avatar3.png'
@@ -96,7 +103,7 @@ const TestimonialPage = (props) => {
                 <div className="container">
                     <div className="xb-testimonial__masonry">
                         <div className="row grid mt-none-100">
-                            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 1, 992: 2 }}>
+                            <ResponsiveMasonryWithNoSSR columnsCountBreakPoints={{ 350: 1, 750: 1, 992: 2 }}>
                                 <Masonry columnsCount={2} gutter="50px">
                                     {testimonial.map((testimonial, tsm) => (
                                         <div className="mt-100" key={tsm}>
@@ -123,7 +130,7 @@ const TestimonialPage = (props) => {
                                         </div>
                                     ))}
                                 </Masonry>
-                            </ResponsiveMasonry>
+                            </ResponsiveMasonryWithNoSSR>
                         </div>
                     </div>
                 </div>
