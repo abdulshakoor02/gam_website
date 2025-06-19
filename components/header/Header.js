@@ -6,7 +6,7 @@ import icon3 from "/public/images/icon/location.svg";
 import icon4 from "/public/images/icon/search.svg";
 import icon5 from "/public/images/icon/us_flag.png";
 import icon6 from "/public/images/icon/arrow_down.svg";
-import logo from "/public/images/logo/logo.svg";
+import logo from "/public/images/logo/gam_logo.jpeg";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -70,7 +70,8 @@ const Header = (props) => {
       </Head>
       <div
         className="header__top-wrap gray-bg"
-        style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
+        // style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
+        style={{ background: '#eab298' }}
       >
         <div className="container">
           <div className="header__top ul_li_between">
@@ -92,16 +93,15 @@ const Header = (props) => {
         </div>
       </div>
       <div
-        className={`header__wrap stricky  ${
-          isSticky ? "stricked-menu stricky-fixed" : ""
-        }`}
+        className={`header__wrap stricky  ${isSticky ? "stricked-menu stricky-fixed" : ""
+          }`}
         style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
       >
         <div className="container">
           <div className="header__inner ul_li_between">
             <div className="header__logo">
               <Link onClick={ClickHandler} href="/">
-                <Image src={logo} alt="" />
+                <Image src={logo} height={70} width={100} alt="" />
               </Link>
             </div>
             <div className="main-menu__wrap ul_li navbar navbar-expand-lg">
@@ -462,6 +462,34 @@ const Header = (props) => {
 */}
                     </ul>
                   </li>
+                  <li className="menu-item-has-children">
+                    <Link onClick={ClickHandler} href="/nursing/Child-Care">
+                      <span>Nursing</span>
+                    </Link>
+
+                    <ul
+                      className="submenu"
+                      style={{ background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)' }}
+                    >
+                      <li>
+                        <Link
+                          onClick={ClickHandler}
+                          href="/nursing/Child-Care"
+                        >
+                          <span>Child Care Support</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          onClick={ClickHandler}
+                          href="/nursing/support-worker"
+                        >
+                          <span>Home Care Support</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+
                   <li>
                     <Link onClick={ClickHandler} href="/about">
                       <span>About us</span>
