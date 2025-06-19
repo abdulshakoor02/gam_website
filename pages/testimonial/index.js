@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import Header from '../../components/header/Header';
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
@@ -22,6 +22,12 @@ import tsm7 from '/public/images/testimonial/avatar7.png'
 import Image from 'next/image';
 
 const TestimonialPage = (props) => {
+
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
 
     const testimonial = [
         {
@@ -102,7 +108,7 @@ const TestimonialPage = (props) => {
                 <div className="container">
                     <div className="xb-testimonial__masonry">
                         <div className="row grid mt-none-100">
-                            {MasonryLibrary && (
+                            {isClient && MasonryLibrary && (
                               <MasonryLibrary.ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 1, 992: 2 }}>
                                 <MasonryLibrary.default columnsCount={2} gutter="50px">
                                   {testimonial.map((testimonial, tsm) => (
