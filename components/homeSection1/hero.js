@@ -50,7 +50,7 @@ const Hero = () => {
               <Slide direction="up" triggerOnce={"false"} duration={1400}>
                 {/* <p>Expert Guidance for a
                                     Seamless Immigration Journey</p> */}
-                <p>
+                <p style={{ color: "white" }}>
                   Go Abroad Migration is your trusted partner in international
                   relocation. With deep expertise and years of experience in
                   global immigration, we specialize in guiding individuals and

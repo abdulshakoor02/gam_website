@@ -29,7 +29,7 @@ const Hero = () => {
               </h1>
             </Slide>
             <Slide direction="up" triggerOnce={"false"} duration={1400}>
-              <p className="pl-100 pr-100 pt-10">
+              <p className="pl-100 pr-100 pt-10" style={{ color:"white"}}>
                 Go Abroad Migration is a trusted and certified immigration
                 consultancy based in Dubai, dedicated to providing professional
                 and transparent visa services. Our team includes MARA-certified
