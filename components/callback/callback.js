@@ -174,7 +174,7 @@ export default function TransitionsModal({
                 sx={{
                   fontSize: "25px",
                   fontWeight: "bold",
-                  color: "#147c67",
+                  color: "#AA236C",
                   mt: "20px",
                 }}
               >
@@ -217,7 +217,7 @@ export default function TransitionsModal({
               />
               <Button
                 sx={{
-                  backgroundColor: '#dc8a64',
+                  background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)',
                   borderColor: "white",
                   minWidth: "270px",
                   color: "white",

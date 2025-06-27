@@ -9,7 +9,7 @@ import places from "../../assets/lottie/places.json";
 
 const Hero = () => {
   const customStyle = {
-    backgroundColor: "#00cc99",
+    background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
   };
   const ClickHandler = () => {
     window.scrollTo(10, 0);

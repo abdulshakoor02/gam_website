@@ -210,7 +210,7 @@ export default function TransitionsModal({
                 sx={{
                   fontSize: "25px",
                   fontWeight: "bold",
-                  color: "#147c67",
+                  color: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
                   mt: "20px",
                 }}
               >
@@ -414,7 +414,7 @@ export default function TransitionsModal({
               </Grid>
               <Button
                 sx={{
-                  backgroundColor: '#dc8a64',
+                  background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
                   borderColor: "white",
                   minWidth: "270px",
                   color: "white",
