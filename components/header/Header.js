@@ -71,7 +71,7 @@ const Header = (props) => {
       <div
         className="header__top-wrap gray-bg"
         style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
-      // style={{ background: '#F28735' }}
+      // style={{ background: 'white' }}
       >
         <div className="container">
           <div className="header__top ul_li_between">
@@ -95,7 +95,8 @@ const Header = (props) => {
       <div
         className={`header__wrap stricky  ${isSticky ? "stricked-menu stricky-fixed" : ""
           }`}
-        style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+        // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+        style={{ background: 'white' }}
       >
         <div className="container">
           <div className="header__inner ul_li_between">
@@ -138,7 +139,8 @@ const Header = (props) => {
                     </Link>
                     <ul
                       className="submenu"
-                      style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                      // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                      style={{ background: 'white' }}
                     >
                       <li className="menu-item-has-children">
                         <Link
@@ -150,7 +152,8 @@ const Header = (props) => {
 
                         <ul
                           className="submenu"
-                          style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                          // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                          style={{ background: 'white' }}
                         >
                           <li>
                             <Link
@@ -167,7 +170,8 @@ const Header = (props) => {
 
                             <ul
                               className="submenu"
-                              style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                              // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                              style={{ background: 'white' }}
                             >
                               <li>
                                 <Link onClick={ClickHandler} href="/pilot/aipp">
@@ -199,7 +203,8 @@ const Header = (props) => {
 
                             <ul
                               className="submenu"
-                              style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                              // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                              style={{ background: 'white' }}
                             >
                               <li>
                                 <Link
@@ -292,7 +297,8 @@ const Header = (props) => {
 
                             <ul
                               className="submenu"
-                              style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                              // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                              style={{ background: 'white' }}
                             >
                               <li>
                                 <Link
@@ -324,7 +330,8 @@ const Header = (props) => {
 
                         <ul
                           className="submenu"
-                          style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                          // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                          style={{ background: 'white' }}
                         >
                           <li>
                             <Link
@@ -469,7 +476,8 @@ const Header = (props) => {
 
                     <ul
                       className="submenu"
-                      style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                      // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                      style={{ background: 'white' }}
                     >
                       <li>
                         <Link
@@ -524,7 +532,8 @@ const Header = (props) => {
                       <span>Blog</span>
                     </Link>
                     <ul
-                      style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                      // style={{ background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)' }}
+                      style={{ background: 'white' }}
                       className="submenu"
                     >
                       <li>
