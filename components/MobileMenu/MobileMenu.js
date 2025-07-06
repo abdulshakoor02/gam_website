@@ -152,7 +152,7 @@ const MobileMenu = () => {
                         {item.submenu ?
                             <Fragment>
                                 <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
-                                    <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
+                                    <i className={`fas ${item.id === openId ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
                                 </p>
                                 <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
                                     <List className="subMenu">

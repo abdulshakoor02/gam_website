@@ -32,12 +32,18 @@
             }
             &.menu-item-has-children {
                 & > a span::after {
-                    content: "+";
+                    content: "\f078"; // Font Awesome chevron-down
+                    font-family: "Font Awesome 5 Pro";
                     display: inline-block;
-                    padding-left: 18px;
-                    font-weight: 500;
-                    @include respond(translateY(-1px));
+                    padding-left: 10px; // Adjust as needed
+                    font-weight: 900; // For solid icons
+                    font-size: 12px; // Adjust as needed
+                    @include respond(translateY(0px)); // Adjust as needed
                 }
+                // Add a style for when the menu is open (if possible with CSS only, otherwise JS class would be needed)
+                // For now, we'll assume the icon doesn't change on hover/open for desktop,
+                // as the submenu appears on hover, not click.
+                // If an "open" state icon change is needed, JS would be required to add a class.
                 &:hover > .submenu {
                     opacity: 1;
                     visibility: visible;
