@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image"; // Import next/image
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 
 // Removed unused imports: Slide, dynamic, NoSSR, GifBackground, places, Lottie
 
@@ -9,9 +11,13 @@ const Section3 = () => { // Renamed component to Section3
     window.scrollTo(10, 0);
   };
 
+  const customStyle = {
+    background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
+  };
+
   // Placeholder image URLs - replace with actual URLs later
-  const placeholderImage1 = "/images/placeholder-small-1.jpg";
-  const placeholderImage2 = "/images/placeholder-small-2.jpg";
+  const placeholderImage1 = "/images/section3/canadalogo.png";
+  const placeholderImage2 = "/images/section3/auslogo.png";
 
   return (
     <section
@@ -41,8 +47,8 @@ const Section3 = () => { // Renamed component to Section3
               alignItems: "center", // Vertically center content (optional)
             }}
           >
-            <h3 style={{ margin: 0, fontSize: "24px", fontWeight: "bold" }}> {/* Adjusted styling for visibility */}
-              Check your eligibility
+            <h3 style={{ margin: 0, fontSize: "44px", fontWeight: "bold" }}> {/* Adjusted styling for visibility */}
+              Check your eligibility Now
             </h3>
           </div>
 
@@ -62,16 +68,17 @@ const Section3 = () => { // Renamed component to Section3
                 <Image
                   src={placeholderImage1}
                   alt="Placeholder Image 1"
-                  width={100} // Specify width
+                  width={200} // Specify width
                   height={100} // Specify height
                   style={{ objectFit: "cover" }} // Ensure image covers the dimensions
                 />
-                <button
-                  onClick={ClickHandler} // Example onClick handler
-                  className="theme-btn" // Using a common button class, adjust if needed
-                >
-                  Button 1
-                </button>
+                <div style={{paddingTop:"10px",paddingRight:"30px"}}>
+                <NoSSR
+                  customStyle={customStyle}
+                  modalState={false}
+                  buttonText="Check Now"
+                />
+                </div>
               </div>
 
               {/* Image 2 and Button 2 */}
@@ -79,16 +86,17 @@ const Section3 = () => { // Renamed component to Section3
                 <Image
                   src={placeholderImage2}
                   alt="Placeholder Image 2"
-                  width={100} // Specify width
+                  width={200} // Specify width
                   height={100} // Specify height
                   style={{ objectFit: "cover" }} // Ensure image covers the dimensions
                 />
-                <button
-                  onClick={ClickHandler} // Example onClick handler
-                  className="theme-btn" // Using a common button class, adjust if needed
-                >
-                  Button 2
-                </button>
+                <div style={{paddingTop:"10px",paddingRight:"30px"}}>
+                <NoSSR
+                  customStyle={customStyle}
+                  modalState={false}
+                  buttonText="Check Now"
+                />
+                </div>
               </div>
             </div>
           </div>
