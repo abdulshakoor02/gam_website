@@ -29,7 +29,7 @@ const Hero = () => {
               </h1>
             </Slide>
             <Slide direction="up" triggerOnce={"false"} duration={1400}>
-              <p className="pl-100 pr-100 pt-10" style={{ color:"white"}}>
+              <p className="pl-100 pr-100 pt-10" style={{ color:"#120f0f"}}>
                 Go Abroad Migration is a trusted and certified immigration
                 consultancy based in Dubai, dedicated to providing professional
                 and transparent visa services. Our team includes MARA-certified
@@ -38,14 +38,14 @@ const Hero = () => {
                 immigration laws and policies.
               </p>
 
-              <p className="pl-100 pr-100 pt-10">
+              <p className="pl-100 pr-100 pt-10" style={{ color:"#120f0f"}}>
                 With over 10 years of industry experience and a global presence
                 spanning 20+ offices, Go Abroad Migration has earned a
                 reputation for excellence in delivering both immigrant and
                 non-immigrant visa solutions.
               </p>
 
-              <p className="pl-100 pr-100 pt-10">
+              <p className="pl-100 pr-100 pt-10" style={{ color:"#120f0f"}}>
                 Whether you're planning to settle permanently in Canada or
                 explore new opportunities in Australia, our licensed immigration
                 consultants are here to guide you every step of the way. We have
@@ -53,7 +53,7 @@ const Hero = () => {
                 their migration goals with reliable and personalized support.
               </p>
 
-              <p className="pl-100 pr-100 pt-10">
+              <p className="pl-100 pr-100 pt-10" style={{ color:"#120f0f"}}>
                 At Go Abroad Migration, we believe in simplifying the migration
                 process through honest advice, step-by-step assistance, and
                 tailored solutions that meet your unique profile. From student

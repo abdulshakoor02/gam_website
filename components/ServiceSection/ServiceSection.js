@@ -32,7 +32,7 @@ const ServiceSection = (props) => {
             </h2>
           </div>
           <div className="row justify-content-md-center mt-none-30">
-            {Services.slice(0, 6).map((service, srv) => (
+            {Services.slice(0, 9).map((service, srv) => (
               // <div className={"col-lg-4 col-md-6 mt-30"} key={srv}>
               <div className="col-lg-4 col-md-6 mt-30 d-flex" key={srv}>
                 {service.title ? (
