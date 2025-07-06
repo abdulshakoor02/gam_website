@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import Hero from "../components/hero/hero";
 import Hero1 from "../components/homeSection1/hero";
 import Section2 from "../components/homeSection2/section2";
+import Section3 from "../components/homeSection3/section3"; // Import Section3
 import PartnerSection from "../components/PartnerSection";
 import ServiceSection from "../components/ServiceSection/ServiceSection";
 import About from "../components/about/about";
@@ -24,6 +25,7 @@ const HomePage = () => {
         <Header />
         <Hero />
         <Section2 />
+        <Section3 /> {/* Render Section3 */}
         <PartnerSection />
         <ServiceSection />
         <About />
