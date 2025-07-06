@@ -19,7 +19,7 @@ const Scrollbar = () => {
     zIndex: " 9999",
   };
   const customStyle = {
-    backgroundColor: "#dc8a64",
+    background: 'linear-gradient(90deg,#AA236C 0%, #F28735 100%)',
     writingMode: "vertical-rl",
     textOrientation: "upright",
     whiteSpace: "nowrap",
@@ -40,6 +40,7 @@ const Scrollbar = () => {
             left: 0,
             zIndex: " 9999",
             backgroundColor: "#47e621",
+            // backgroundColor: "#AA236C",
           }}
           aria-label="add"
         >

@@ -17,7 +17,7 @@ const Hero = () => {
     // <section className="hero hero__style-one bg_img" style={{ backgroundImage: `url(${'/images/bg/hero_bg.jpg'})` }}>
     <section
       style={{
-        background: 'linear-gradient(90deg, #c97751 0%, #e8a079 100%)',
+        background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
         backgroundSize: "cover",
         // width: 1920,
         // height: 755,
@@ -50,7 +50,7 @@ const Hero = () => {
               <Slide direction="up" triggerOnce={"false"} duration={1400}>
                 {/* <p>Expert Guidance for a
                                     Seamless Immigration Journey</p> */}
-                <p>
+                <p style={{ color: "white" }}>
                   Go Abroad Migration is your trusted partner in international
                   relocation. With deep expertise and years of experience in
                   global immigration, we specialize in guiding individuals and
