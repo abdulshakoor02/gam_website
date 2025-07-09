@@ -19,4 +19,12 @@
     --color-gray-2: #F6F6F6;
     --color-border: #EFF5F8;
     --easing: cubic-bezier(0.67, 0.04, 0.3, 0.91);
+
+    // Modern Gradients
+    --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-about: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    --gradient-services: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+    --gradient-testimonials: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+    --gradient-contact: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-footer: linear-gradient(135deg, #485563 0%, #29323c 100%);
 }

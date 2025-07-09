@@ -2,9 +2,13 @@
 /*  07. about
 /*----------------------------------------*/
 .about {
+  padding-top: 60px; // Add padding for better spacing if it's a standalone section
+  padding-bottom: 60px; // Add padding for better spacing
+  background: var(--gradient-about); // Applied modern gradient
+
   &__img {
     position: absolute;
-    background_size: "cover";
+    background-size: cover; // Corrected property name
     top: 44%;
     @include transform(translateY(-50%));
     z-index: -1;
@@ -25,6 +29,19 @@
       @include transform(translate(0));
     }
   }
+  // Ensure text within the about section is readable on the new gradient
+  .sec-title h2, .xb-about-content p, .xb-about-content a, .xb-about-list li {
+    color: var(--color-dark); // Change to a darker color for contrast if needed, or white if gradient is dark
+  }
+   .xb-about-content p, .xb-about-list li {
+    color: var(--color-heading); // Using a defined heading color for better contrast
+  }
+  .xb-about-content a {
+    color: var(--color-primary); // Use primary color for links for consistency
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
 }
 .about-list {
   margin: -10px;
@@ -41,16 +58,16 @@
       padding: 40px 25px;
       overflow: hidden;
       z-index: 1;
-      box-shadow: 0px 30px 45px rgba(122, 146, 168, 0.08);
-      border: 1px solid #edf3f5;
-      background-color: var(--color-white);
+      box-shadow: 0px 30px 45px rgba(0, 0, 0, 0.08); // Adjusted shadow for gradient
+      border: 1px solid rgba(255,255,255,0.2); // Lighter border for dark gradient
+      background-color: rgba(255,255,255,0.9); // Slightly transparent white for cards on gradient
       @include border-radius(15px);
       &::before {
         position: absolute;
         width: 45px;
         height: 105px;
         @include border-radius(30px);
-        background-color: #f4f8fa;
+        background-color: rgba(255,255,255,0.1); // Lighter shape accent
         content: "";
         top: -6px;
         left: 0px;
@@ -63,24 +80,23 @@
       width: 36px;
       height: 36px;
       margin-right: 29px;
-      background-color: #fe6c3f;
-      color: var(--color-dark);
+      background-color: var(--color-primary); // Using primary color
+      color: var(--color-white); // Ensure number is white
       @include center;
       @include border-radius(50%);
       position: absolute;
       top: 49px;
       left: 25px;
       font-weight: 700;
-      box-shadow: 0px 4px 7px rgba(178, 190, 205, 0.29);
-      color: var(--color-white);
+      box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2); // Adjusted shadow
       &.color-2 {
-        background-color: #00cc99;
+        background-color: var(--color-secondary); // Using secondary color
       }
       &.color-3 {
-        background-color: #0091ff;
+        background-color: #0091ff; // Keep or map to theme colors
       }
       &.color-4 {
-        background-color: #ffbd0f;
+        background-color: #ffbd0f; // Keep or map to theme colors
       }
     }
     &--holder {
@@ -88,6 +104,7 @@
     }
     &--title {
       font-size: 24px;
+      color: var(--color-heading); // Ensure title is readable
     }
   }
 }
@@ -106,6 +123,10 @@
   .shape {
     position: absolute;
     z-index: -1;
+    // Adjust shape colors or opacity if they clash with the gradient
+    img {
+        opacity: 0.5; // Example: make shapes semi-transparent
+    }
     &--1 {
       left: 6%;
       top: 46%;
@@ -131,7 +152,7 @@
     margin-bottom: 18px;
   }
   a {
-    color: #110f10;
+    // color: #110f10; // Already handled above
     font-weight: 500;
     letter-spacing: -0.32px;
     &:hover i {
@@ -148,9 +169,9 @@
   .xb-item {
     &--img {
       img {
-        border: 5px solid #fff;
+        border: 5px solid rgba(255,255,255,0.8); // Lighter border for images on gradient
         @include border-radius(10px);
-        box-shadow: 0px 6px 13px 0px rgba(85, 96, 118, 0.08);
+        box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.1); // Adjusted shadow
       }
     }
     &--main-img {
@@ -196,6 +217,9 @@
   top: 11%;
   left: 0;
   z-index: -2;
+  img { // Adjust shape colors or opacity if they clash with the gradient
+      opacity: 0.3; // Example: make shapes semi-transparent
+  }
   @include respond(laptop) {
     display: none;
   }
@@ -213,13 +237,14 @@
   li {
     font-size: 18px;
     font-weight: 500;
-    color: #787b84;
+    // color: #787b84; // Already handled above
     &:not(:last-child) {
       margin-bottom: 10px;
     }
     i {
       margin-right: 10px;
       font-size: 18px;
+      color: var(--color-primary); // Use primary color for icons
     }
   }
 }

@@ -9,15 +9,17 @@ const ServiceSection = (props) => {
   };
 
   return (
-    <section className="visa type pt-50 pb-135">
+    // Added service-section class for gradient styling
+    <section className="service-section visa type pt-50 pb-135">
       <div className="container">
         <div className="service-wrap pos-rel">
           <div className="service-img-wrap">
             <div
               className="service-bg"
-              style={{
-                backgroundImage: `url(${"/images/bg/service_bg.png"})`,
-              }}
+              // Removed inline background image to allow gradient to show
+              // style={{
+              //   backgroundImage: `url(${"/images/bg/service_bg.png"})`,
+              // }}
             ></div>
             <div
               className="service-img"
@@ -33,17 +35,14 @@ const ServiceSection = (props) => {
           </div>
           <div className="row justify-content-md-center mt-none-30">
             {Services.slice(0, 9).map((service, srv) => (
-              // <div className={"col-lg-4 col-md-6 mt-30"} key={srv}>
               <div className="col-lg-4 col-md-6 mt-30 d-flex" key={srv}>
                 {service.title ? (
-                  // <div className="xb-service">
                   <div className="xb-service w-100 d-flex flex-column">
-                    {/* <div className="xb-item--inner"> */}
                     <div className="xb-item--inner h-100 d-flex flex-column">
                       <div
-                        className={`xb-item--icon mb-50 ${service.iconColor}`}
+                        className={`xb-item--icon mb-50 ${service.iconColor || 'color1'}`} // Added fallback icon color
                       >
-                        <Image src={service.sIcon} alt="" />
+                        <Image src={service.sIcon} alt={service.title || "Service Icon"} />
                       </div>
                       <div className="xb-item--holder">
                         <h3 className="xb-item--title mb-20">
@@ -55,8 +54,8 @@ const ServiceSection = (props) => {
                             {service.title}
                           </Link>
                         </h3>
-                        <div className="xb-item--description">
-                          {service.description}
+                        <div className="xb-item--content"> {/* Changed class for consistency with SCSS */}
+                          <p>{service.description}</p> {/* Ensure description is wrapped in <p> or similar for styling */}
                         </div>
                       </div>
                     </div>

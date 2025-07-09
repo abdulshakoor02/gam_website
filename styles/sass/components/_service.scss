@@ -1,6 +1,20 @@
 /*----------------------------------------*/
 /*  06. service
 /*----------------------------------------*/
+.service-section { // Add a wrapper class for the section if not already present
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: var(--gradient-services);
+
+    .sec-title h2, .sec-title p { // Ensure section titles are readable
+        color: var(--color-white); // Or a contrasting dark color depending on gradient
+    }
+     .sec-title h2 span {
+        color: var(--color-white);
+        opacity: 0.8;
+    }
+}
+
 .xb-service {
     display: flex;
     flex-direction: column;
@@ -15,7 +29,7 @@
     &:hover {
         .xb-item {
             &--inner {
-                box-shadow: 0px 14px 19px 0px rgba(221, 229, 236, 0.42);
+                box-shadow: 0px 14px 19px 0px rgba(0, 0, 0, 0.15); // Adjusted shadow for gradient
                 border-color: transparent;
             }
         }
@@ -34,20 +48,20 @@
     .xb-item {
         &--inner {
             padding: 42px;
-            border: 1px solid #EDF3F5;
+            border: 1px solid rgba(255,255,255,0.2); // Lighter border for cards on gradient
             @include border-radius(20px);
-            background-color: var(--color-white);
+            background-color: rgba(255,255,255,0.9); // Slightly transparent white for cards
             @include transition(.3s);
             overflow: hidden;
             position: relative;
             z-index: 1;
 
-            &::before {
+            &::before { // Decorative element
                 position: absolute;
                 width: 70px;
                 height: 160px;
                 @include border-radius(35px);
-                background-color: #F4F8FA;
+                background-color: rgba(255,255,255,0.1); // Lighter accent
                 content: "";
                 top: -39px;
                 left: 5px;
@@ -59,42 +73,53 @@
         &--icon {
             width: 58px;
             height: 58px;
-            background-color: #FE6C3F;
+            background-color: var(--color-primary); // Use theme primary color
             @include center;
             @include border-radius(50%);
-            box-shadow: 0px 4px 7px rgba(178, 190, 205, 0.29);
+            box-shadow: 0px 4px 7px rgba(0,0,0, 0.2); // Adjusted shadow
+            margin-bottom: 20px; // Add some space below icon
+
+            img { // If using img tags for icons
+                filter: brightness(0) invert(1); // Make icon white if it's dark
+            }
 
             &.color2 {
-                background-color: #897CB5;
+                background-color: var(--color-secondary); // Use theme secondary color
             }
-
+            // Add more color variations if needed, mapping to theme colors
             &.color3 {
-                background-color: var(--color-primary);
-            }
-
-            &.color4 {
                 background-color: #0091FF;
             }
 
-            &.color5 {
+            &.color4 {
                 background-color: #FFBD0F;
             }
 
-            &.color6 {
+            &.color5 {
                 background-color: #FB3F7E;
+            }
+             &.color6 { // Example: if you had a sixth color
+                background-color: #4CAF50; // A green color
             }
         }
 
         &--title {
             font-size: 24px;
+            color: var(--color-heading); // Ensure title is readable
 
             a {
                 color: currentColor;
+                 &:hover {
+                    color: var(--color-primary); // Or secondary, for hover effect
+                }
             }
+        }
+        &--content p { // Ensure paragraph text inside service items is readable
+            color: var(--color-default);
         }
     }
 
-    &__top {
+    &__top { // Styling for the top part of the service section (title area)
         align-items: flex-end;
         padding: 0 45px;
 
@@ -104,8 +129,10 @@
     }
 }
 
-.xb-service2 {
+.xb-service2 { // Styles for an alternative service layout
     width: 25%;
+    background-color: rgba(0,0,0,0.3); // Darker background for contrast if this is on a light gradient
+    border: 1px solid rgba(255,255,255,0.1); // Light border
 
     @include respond(lg) {
         width: 33.333%;
@@ -134,22 +161,22 @@
             border-right: 0;
 
             @media(max-width:1199px) {
-                border-right: 1px solid #1D1D1D;
+                border-right: 1px solid rgba(255,255,255,0.1);
             }
         }
     }
 
     @media(max-width:1199px) {
         .xb-item--inner {
-            border: 1px solid #1D1D1D;
+            border: 1px solid rgba(255,255,255,0.1);
         }
     }
 
     .xb-item {
         &--inner {
             padding: 45px;
-            border-right: 1px solid #1D1D1D;
-            border-top: 1px solid #1D1D1D;
+            border-right: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
             @include transition(.3s);
             position: relative;
 
@@ -158,7 +185,7 @@
             }
 
             &:hover {
-                background-color: #121212;
+                background-color: rgba(0,0,0,0.5); // Darken on hover
 
                 .xb-item--link::before {
                     right: -25px;
@@ -169,23 +196,29 @@
         &--icon {
             margin-bottom: 30px;
             min-height: 48px;
+             img { // Ensure icons are visible on dark background
+                filter: brightness(0) invert(1);
+            }
         }
 
         &--title {
             font-size: 24px;
             font-weight: 600;
-            color: var(--color-white);
+            color: var(--color-white); // White text for dark background
             margin-bottom: 20px;
             max-width: 180px;
 
             a {
                 color: var(--color-white);
+                 &:hover {
+                    color: var(--color-primary); // Or secondary
+                }
             }
         }
 
         &--content {
             font-size: 14px;
-            color: #A3A3A3;
+            color: rgba(255,255,255,0.7); // Lighter text for readability
             line-height: 24px;
             margin-bottom: 40px;
             letter-spacing: 0;
@@ -205,7 +238,7 @@
                 @include transform(translateY(-50%));
                 border-top: 5px solid transparent;
                 border-bottom: 5px solid transparent;
-                border-left: 6px solid #fff;
+                border-left: 6px solid var(--color-white); // White arrow
                 border-left-width: 9px;
                 content: "";
                 @include transition(.3s cubic-bezier(.67, .04, .3, .91));
@@ -231,21 +264,14 @@
     }
 }
 
-.service-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-height: 475px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-color: #EDF3F5;
+.service-bg { // If this is a background for the whole section
+    // This might conflict with the gradient, decide which one to use or blend them
+    // For now, assuming gradient takes precedence. If image is needed, consider overlaying gradient.
+    // background-color: #EDF3F5; // Fallback if image fails or removed
+    // background-image: var(--gradient-services); // Apply gradient here if this is the main bg
 }
 
-.service-img {
+.service-img { // An image within the service section
     position: absolute;
     top: 0;
     right: 0;
@@ -253,6 +279,7 @@
     max-height: 790px;
     height: 100%;
     @include border-radius(20px);
+    opacity: 0.7; // Make image slightly transparent if on top of gradient
 
     @include respond(md) {
         display: none;
@@ -268,9 +295,12 @@
     padding-bottom: 310px;
 }
 
-.service-shape {
+.service-shape { // Decorative shapes
     .shape {
         position: absolute;
+        img { // Adjust opacity or color of shapes if they clash
+            opacity: 0.4;
+        }
 
         @include respond(md) {
             display: none;

@@ -1,8 +1,9 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import Image from "next/image";
+import { ThreeDMarquee } from "../ui/3d-marquee"; // Adjusted import path
+
+// Image imports (ensure these paths are correct)
 import mara from "/public/images/brand/maralogo.jpg";
 import canada from "/public/images/brand/iccrc-logo.png";
 import oisc from "/public/images/brand/oisc.jpg";
@@ -10,79 +11,39 @@ import ielts from "/public/images/brand/ielts.jpg";
 import khaleej from "/public/images/brand/khaleej.jpg";
 import idp from "/public/images/brand/idp.jpg";
 import bc from "/public/images/brand/bc.jpg";
-import Image from "next/image";
 
-const partners = [
-  {
-    pImg: mara,
-  },
-  {
-    pImg: canada,
-  },
-  {
-    pImg: oisc,
-  },
-  {
-    pImg: ielts,
-  },
-  {
-    pImg: khaleej,
-  },
-  {
-    pImg: idp,
-  },
-  {
-    pImg: bc,
-  },
+// Add more imports if you have more than 7 images, up to 16 for optimal display in 4 columns
+import br_01 from "/public/images/brand/br_01.png";
+import br_02 from "/public/images/brand/br_02.png";
+import br_03 from "/public/images/brand/br_03.png";
+import br_04 from "/public/images/brand/br_04.png";
+import br_05 from "/public/images/brand/br_05.png";
+import br_06 from "/public/images/brand/br_06.png";
+import br_07 from "/public/images/brand/br_07.png";
+import br_08 from "/public/images/brand/br_08.png";
+
+
+const partnerImageSources = [
+  mara.src,
+  canada.src,
+  oisc.src,
+  ielts.src,
+  khaleej.src,
+  idp.src,
+  bc.src,
+  // Add up to 16 images for the marquee
+  br_01.src,
+  br_02.src,
+  br_03.src,
+  br_04.src,
+  br_05.src,
+  br_06.src,
+  br_07.src,
+  br_08.src,
+  // If you have fewer than 16, you can repeat some or ensure your CSS handles it gracefully
 ];
 
 const PartnerSection = (props) => {
-  var settings = {
-    dots: false,
-    arrows: false,
-    speed: 1000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 7,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section className="brand pt-110 pb-90">
       <div className="container">
@@ -91,23 +52,15 @@ const PartnerSection = (props) => {
             <span>We're proud to work with our preferred partners</span>
           </span>
         </h2>
-        <div className="xb-swiper-sliders brand-slider">
-          <div className="xb-carousel-inner">
-            <div className="xb-swiper-container">
-              <div className="xb-swiper-wrapper">
-                <Slider {...settings}>
-                  {partners.map((partner, pitem) => (
-                    <div className="xb-swiper" key={pitem}>
-                      <Link href="/">
-                        <Image src={partner.pImg} alt="" />
-                      </Link>
-                    </div>
-                  ))}
-                </Slider>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Ensure there are enough images for the marquee,
+            the component expects images to be split into 4 columns.
+            A minimum of 4 images is required. For best results, use a multiple of 4.
+        */}
+        {partnerImageSources.length >= 4 ? (
+          <ThreeDMarquee images={partnerImageSources} className="[--duration:20s]" />
+        ) : (
+          <p className="text-center text-red-500">Not enough images for the 3D Marquee effect. Please add at least 4 images.</p>
+        )}
       </div>
     </section>
   );
