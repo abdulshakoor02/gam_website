@@ -105,7 +105,11 @@ export const CardItem = ({
   ...rest
 }) => {
   const ref = useRef(null);
-  const [isMouseEntered] = useMouseEnter();
+  const mouseEnterContext = useContext(MouseEnterContext);
+  if (mouseEnterContext === undefined) {
+    throw new Error("useMouseEnter must be used within a MouseEnterProvider");
+  }
+  const [isMouseEntered] = mouseEnterContext;
 
   useEffect(() => {
     handleAnimations();
