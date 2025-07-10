@@ -12,6 +12,9 @@ import idp from "/public/images/brand/idp.jpg";
 import bc from "/public/images/brand/bc.jpg";
 import Image from "next/image";
 
+const images = [
+  mara, canada, oisc, ielts, khaleej, idp, bc
+]
 const partners = [
   {
     pImg: mara,
