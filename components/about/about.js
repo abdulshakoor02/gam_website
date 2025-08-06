@@ -10,9 +10,9 @@ const About = (props) => {
         <div className="sec-title mb-55">
           {/* <h2 className="mb-30 wow skewIn">Dependable and Trustworthy Visa & <br/>
                         <span>Immigration Guidance</span></h2> */}
-          <h2 className="mb-30 wow skewIn">
+          <h2 className="mb-30 wow skewIn" style={{ color: "white" }}>
             Your Global Immigration Partner <br />
-            <span>Specializing in PR, Work, and Study Visas</span>
+            <span style={{ color: "black" }}>Specializing in PR, Work, and Study Visas</span>
           </h2>
           {/* <p>Our team of seasoned professionals understands the <br /> complexities of immigration laws and visa
                         procedures.</p> */}
@@ -20,7 +20,7 @@ const About = (props) => {
                         Our experienced team specializes in Canada PR, Express Entry, and PNP programs. <br />
                         We simplify your journey with expert immigration guidance and legal support.
                     </p> */}
-          <p>
+          <p style={{ color: "black" }}>
             We offer comprehensive immigration consulting services including{" "}
             <br />
             global PR pathways like Express Entry, PNP, and skilled migration.{" "}
