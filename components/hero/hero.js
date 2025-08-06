@@ -35,9 +35,9 @@ const Hero = () => {
             <div className="hero__content">
               <Slide direction="up" triggerOnce={"false"} duration={1200}>
                 {/* <h1>Immigration visa <br /> <span>Consulting</span></h1> */}
-                <h1>
-                  Immigration &<br />
-                  <span>Visa Consulting</span>
+                <h1 style={{ fontSize: "50px" }}>
+                  Immigration Service
+                  <span>, Study Permit and Business Setup</span>
                 </h1>
                 {/* <h1>
                                     Simplifying<br />
@@ -49,9 +49,7 @@ const Hero = () => {
                                     Seamless Immigration Journey</p> */}
                 <p>
                   Start your immigration journey to any country including
-                  Canada, Australia, Germany, the UK, or the USA. Discover
-                  Express Entry, PNP, and other PR programs with our expert
-                  support.
+                  Canada, Australia, Germany, the UK, or the USA. Discover the program like 189 subclass, 190 subclass, Start up program , express entry , study permit and admission.
                 </p>
                 {/* <p>
                   From Canada PR via Express Entry to skilled migration to Australia,
@@ -65,15 +63,16 @@ const Hero = () => {
                                     <li><i className="far fa-check"></i>Meeting Your Unique Needs</li>
                                     <li><i className="far fa-check"></i>Tailored Immigration Solutions</li> */}
                   <li>
-                    <i className="far fa-check"></i>Eligibility for Immigration
-                    Worldwide
+                    <i className="far fa-check"></i>Eligibility for immigration from Registered Lawyer
                   </li>
                   <li>
-                    <i className="far fa-check"></i>Visa Processing Time & PR
-                    Eligibility Check
+                    <i className="far fa-check"></i>Free Consultation and Possibility of success
                   </li>
                   <li>
-                    <i className="far fa-check"></i>Latest Canada Draws in 2024
+                    <i className="far fa-check"></i>Updated draws and changes in all visa service
+                  </li>
+                  <li>
+                    <i className="far fa-check"></i>Register to get connect with direct lawyer
                   </li>
                 </Slide>
               </ul>
