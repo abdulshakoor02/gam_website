@@ -9,6 +9,20 @@ import { Toaster } from "react-hot-toast";
 const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 
 const Scrollbar = () => {
+  const phoneNumber = "+971504916720"; // UAE phone number format
+  const whatsappNumber = "+971504916720"; // Same number for WhatsApp
+
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleWhatsAppClick = () => {
+    // Remove '+' and spaces from number for WhatsApp
+    const cleanNumber = whatsappNumber.replace(/[+ ]/g, '');
+    const whatsappUrl = `https://wa.me/${cleanNumber}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const modalStyle = {
     "@media (min-width: 300px) and (max-width: 900px)": {
       position: "relative",
