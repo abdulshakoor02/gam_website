@@ -66,9 +66,9 @@ const FunFactSection = (props) => {
           {/* <p>Embarking on a journey to reunite families, we recently had the privilege of assisting a <br/>
                         couple in securing their spouse's visa. </p> */}
           <p>
-            From Express Entry to PNP approvals and skilled worker pathways, our
+            Canada, Austalia , New Zealand , Europe and UK , our
             global team simplifies <br />
-            the Canadian immigration process and beyond — helping clients from
+            the immigration process and beyond — helping clients from
             the UAE.
           </p>
         </div>
