@@ -60,34 +60,59 @@ const Scrollbar = () => {
         <Toaster />
         <Fab
           sx={{
-            "@media (min-width: 300px) and (max-width: 900px)": {
-              position: "relative",
+            "@media (max-width: 768px)": {
+              position: "fixed",
+              top: "80px",
+              left: "20px",
+              zIndex: 9999,
+              backgroundColor: "#47e621",
+              width: 56,
+              height: 56,
+              "&:hover": {
+                backgroundColor: "#45b620",
+              },
             },
             position: "fixed",
             top: 470,
             left: 0,
             zIndex: " 9999",
             backgroundColor: "#47e621",
-            // backgroundColor: "#AA236C",
+            "&:hover": {
+              backgroundColor: "#45b620",
+            },
           }}
           aria-label="WhatsApp"
           onClick={handleWhatsAppClick}
         >
-          <WhatsApp sx={{ color: "white" }} fontSize="large" />
+          <WhatsApp sx={{ color: "white", fontSize: { xs: "24px", sm: "28px" } }} />
         </Fab>
 
         <Fab
           sx={{
+            "@media (max-width: 768px)": {
+              position: "fixed",
+              top: "150px",
+              left: "20px",
+              zIndex: 9999,
+              width: 56,
+              height: 56,
+              "&:hover": {
+                backgroundColor: "#1976d2",
+              },
+            },
             position: "fixed",
             top: 410,
             left: 0,
             zIndex: " 9999",
+            "&:hover": {
+              backgroundColor: "#1976d2",
+            },
           }}
           color="primary"
           aria-label="Phone"
           onClick={handlePhoneClick}
         >
-          <Phone fontSize="large" />
+          <Phone sx={{ fontSize: { xs: "24px", sm: "28px" } }} />
         </Fab>
         <NoSSR
           customStyle={customStyle}
