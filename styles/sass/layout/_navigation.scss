@@ -50,6 +50,13 @@
                     @include transform(none !important);
                     pointer-events: all;
                 }
+                
+                &.active > .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                    @include transform(none !important);
+                    pointer-events: all;
+                }
             }
             &:hover > a,
             &.active > a {
@@ -72,7 +79,6 @@
                 z-index: 3;
                 text-align: left;
                 @include transform(translate3d(0,18px,0));
-                pointer-events: none;
                 box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.10);
                 li {
                     a {
@@ -98,5 +104,54 @@
         padding: 5px 19px;
         border: 1px solid var(--color-border);
         @include border-radius(5px);
+    }
+}
+
+// Dropdown active states for click functionality
+.main-menu ul li.active > .submenu {
+    opacity: 1;
+    visibility: visible;
+    @include transform(none !important);
+    pointer-events: all;
+}
+
+// Ensure dropdowns work on mobile with click
+@media (max-width: 991px) {
+    .main-menu ul li.menu-item-has-children {
+        position: relative;
+        
+        & > a {
+            position: relative;
+            cursor: pointer;
+            
+            &::after {
+                content: '\f078';
+                font-family: "Font Awesome 5 Pro";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 12px;
+                font-weight: 900;
+            }
+        }
+        
+        &.active > a::after {
+            content: '\f077'; // Chevron up
+        }
+        
+        & > .submenu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            pointer-events: all;
+            box-shadow: none;
+            display: none;
+            
+            &.active {
+                display: block;
+            }
+        }
     }
 }

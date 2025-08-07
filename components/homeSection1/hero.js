@@ -19,54 +19,68 @@ const Hero = () => {
       style={{
         background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
         backgroundSize: "cover",
-        // width: 1920,
-        // height: 755,
-        // backgroundImage: `url(${"/images/bg/hero_bg.jpg"})`,
+        padding: "60px 0",
+        minHeight: "70vh",
+        display: "flex",
+        alignItems: "center"
       }}
     >
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-xl-6 col-lg-7">
-            <Lottie
-              animationData={places}
-              loop={true}
-              play={true}
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            />
+          <div className="col-lg-6 mb-4 mb-lg-0">
+            <div style={{
+              height: "400px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}>
+              <Lottie
+                animationData={places}
+                loop={true}
+                play={true}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  maxWidth: "400px"
+                }}
+              />
+            </div>
           </div>
-          <div className="col-xl-6 col-lg-7" style={{ marginBottom: "15px" }}>
-            <div className="hero__content text-end">
+          <div className="col-lg-6">
+            <div className="hero__content">
               <Slide direction="up" triggerOnce={"false"} duration={1200}>
-                {/* <h1>Immigration visa <br /> <span>Consulting</span></h1> */}
-                <h1 className="align-items-center">About us</h1>
-                {/* <h1>
-                                    Simplifying<br />
-                                    <span>Immigration & PR</span>
-                                </h1> */}
+                <h1 style={{
+                  fontSize: "clamp(28px, 4vw, 40px)",
+                  fontWeight: "700",
+                  color: "white",
+                  marginBottom: "20px",
+                  lineHeight: "1.3",
+                  textAlign: "center"
+                }}>
+                  About Go Abroad Migration
+                </h1>
               </Slide>
               <Slide direction="up" triggerOnce={"false"} duration={1400}>
-                {/* <p>Expert Guidance for a
-                                    Seamless Immigration Journey</p> */}
-                <p style={{ color: "white" }}>
-                  Go Abroad Migration is your trusted partner in international
-                  relocation. With deep expertise and years of experience in
-                  global immigration, we specialize in guiding individuals and
-                  families through the complex processes of moving abroad.
-                  Whether you're pursuing education, work, or permanent
-                  residency, our team has in-depth knowledge of immigration laws
-                  and procedures across multiple countries. We’re committed to
-                  making your journey smooth, compliant, and stress-free—because
-                  at Go Abroad Migration, your future abroad starts with
-                  confidence.
-                </p>
-                {/* <p>
-                  From Canada PR via Express Entry to skilled migration to Australia,
-                  UK, Germany, and more — our consultants simplify the global immigration process.
-                  Check eligibility, understand visa requirements, and get expert support from start to finish.
-                </p> */}
+                <div style={{
+                  color: "white",
+                  fontSize: "clamp(16px, 2.2vw, 18px)",
+                  lineHeight: "1.6",
+                  marginBottom: "30px",
+                  textAlign: "center"
+                }}>
+                  <p style={{ marginBottom: "20px" }}>
+                    Go Abroad Migration is your trusted partner in international
+                    relocation. With deep expertise and years of experience in
+                    global immigration, we specialize in guiding individuals and
+                    families through the complex processes of moving abroad.
+                    Whether you're pursuing education, work, or permanent
+                    residency, our team has in-depth knowledge of immigration laws
+                    and procedures across multiple countries. We're committed to
+                    making your journey smooth, compliant, and stress-free—because
+                    at Go Abroad Migration, your future abroad starts with
+                    confidence.
+                  </p>
+                </div>
               </Slide>
             </div>
           </div>

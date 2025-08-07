@@ -26,6 +26,12 @@ const Scrollbar = () => {
   const modalStyle = {
     "@media (min-width: 300px) and (max-width: 900px)": {
       position: "relative",
+      top: "auto",
+      right: "auto",
+      bottom: "20px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      zIndex: 9999,
     },
     position: "fixed",
     top: 370,
@@ -38,7 +44,15 @@ const Scrollbar = () => {
     textOrientation: "upright",
     whiteSpace: "nowrap",
     minWidth: "auto", // optional: keep it compact
-    padding: 1, // optional: adjust as needed
+    padding: 1, // optional: adjust as needed,
+    "@media (max-width: 768px)": {
+      writingMode: "horizontal-tb",
+      textOrientation: "auto",
+      whiteSpace: "normal",
+      padding: "12px 24px",
+      borderRadius: "25px",
+      fontSize: "clamp(14px, 2vw, 16px)",
+    }
   };
   return (
     <div className="col-lg-12">

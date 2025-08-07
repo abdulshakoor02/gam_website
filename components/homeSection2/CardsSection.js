@@ -48,18 +48,29 @@ const CardsSection = () => {
     ];
 
     return (
-        <section className="cards-section pt-120 pb-130">
+        <section className="cards-section pt-80 pb-80">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
-                        <div className="sec-title text-center mb-80">
+                        <div className="sec-title text-center mb-60">
                             <Slide direction="up" triggerOnce={true} duration={1200}>
-                                <h2 className="mb-20">
-                                    Choose Your favourite <span>Program</span>
+                                <h2 style={{
+                                    fontSize: "clamp(28px, 4vw, 36px)",
+                                    fontWeight: "700",
+                                    color: "#333",
+                                    lineHeight: "1.3"
+                                }}>
+                                    Choose Your Favourite <span>Program</span>
                                 </h2>
                             </Slide>
                             <Slide direction="up" triggerOnce={true} duration={1400}>
-                                <p className="text-lg">
+                                <p style={{
+                                    fontSize: "clamp(16px, 2.2vw, 18px)",
+                                    lineHeight: "1.6",
+                                    color: "#666",
+                                    maxWidth: "600px",
+                                    margin: "0 auto"
+                                }}>
                                     Professional immigration and visa services tailored to your needs
                                 </p>
                             </Slide>
@@ -71,7 +82,7 @@ const CardsSection = () => {
                     {cardsData.map((card, index) => (
                         <div
                             key={card.id}
-                            className="col-lg-3 col-md-6 mb-30"
+                            className="col-lg-3 col-md-6 col-sm-12 mb-30"
                             role="listitem"
                             aria-label={`${card.title} card`}
                         >
@@ -85,9 +96,17 @@ const CardsSection = () => {
                                     className="card-item h-full"
                                     role="article"
                                     aria-labelledby={`card-title-${card.id}`}
+                                    style={{
+                                        background: "white",
+                                        borderRadius: "15px",
+                                        boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                                        overflow: "hidden",
+                                        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                                        height: "100%"
+                                    }}
                                 >
-                                    <div className="card-image-wrapper relative overflow-hidden rounded-lg mb-30 group">
-                                        <div className="relative w-full h-64">
+                                    <div className="card-image-wrapper relative overflow-hidden rounded-t-lg mb-30 group" style={{ height: "250px" }}>
+                                        <div className="relative w-full h-full">
                                             <Image
                                                 src={card.image}
                                                 alt={card.alt}
@@ -100,18 +119,30 @@ const CardsSection = () => {
 
                                             {/* Modern Overlay Text */}
                                             <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-100 transition-all duration-500">
-                                                <div className="bg-white rounded-xl p-6 text-center shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
-                                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2 tracking-tight">
+                                                <div className="bg-white rounded-xl p-4 text-center shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300" style={{ maxWidth: "90%" }}>
+                                                    <h3 style={{
+                                                        fontSize: "clamp(14px, 2.5vw, 18px)",
+                                                        fontWeight: "600",
+                                                        color: "#333",
+                                                        marginBottom: "8px",
+                                                        lineHeight: "1.3"
+                                                    }}>
                                                         {card.overlayText}
                                                     </h3>
-                                                    <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+                                                    <div style={{ width: "12px", height: "2px", background: "linear-gradient(to right, #AA236C, #F28735)", margin: "0 auto", borderRadius: "1px" }}></div>
                                                 </div>
                                             </div>
 
-                                            <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                            <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                                                 <h3
                                                     id={`card-title-${card.id}`}
-                                                    className="text-white text-xl font-bold mb-2"
+                                                    style={{
+                                                        fontSize: "clamp(16px, 2.5vw, 20px)",
+                                                        fontWeight: "600",
+                                                        color: "white",
+                                                        marginBottom: "5px",
+                                                        textShadow: "0 1px 2px rgba(0,0,0,0.5)"
+                                                    }}
                                                 >
                                                     {card.title}
                                                 </h3>
@@ -119,13 +150,37 @@ const CardsSection = () => {
                                         </div>
                                     </div>
 
-                                    <div className="card-content">
-                                        <b>{card.overlayText}</b>
-                                        <br />
-                                        <p className="text-gray-700 leading-relaxed mb-4">
+                                    <div className="card-content" style={{ padding: "20px" }}>
+                                        <b style={{
+                                            fontSize: "clamp(14px, 2vw, 16px)",
+                                            color: "#AA236C",
+                                            display: "block",
+                                            marginBottom: "10px"
+                                        }}>
+                                            {card.overlayText}
+                                        </b>
+                                        <p style={{
+                                            fontSize: "clamp(13px, 2vw, 15px)",
+                                            lineHeight: "1.5",
+                                            color: "#666",
+                                            marginBottom: "20px"
+                                        }}>
                                             {card.description}
                                         </p>
                                         <Link
+                                            style={{
+                                                display: "inline-block",
+                                                padding: "10px 20px",
+                                                background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
+                                                color: "white",
+                                                textDecoration: "none",
+                                                borderRadius: "25px",
+                                                fontSize: "clamp(14px, 2vw, 16px)",
+                                                fontWeight: "500",
+                                                textAlign: "center",
+                                                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                                                boxShadow: "0 4px 15px rgba(170, 35, 108, 0.3)"
+                                            }}
                                             className="grd-btn"
                                             aria-label={`Learn more about ${card.title}`}
                                             href={card.href}

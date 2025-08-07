@@ -24,8 +24,9 @@ const Section3 = () => { // Renamed component to Section3
       style={{
         // backgroundImage: `url(${"/images/bg/hero_bg.jpg"})`, // Kept original background for now, can be changed
         marginTop: "20px",
-        paddingTop: "50px", // Added padding for better spacing
-        paddingBottom: "50px", // Added padding for better spacing
+        paddingTop: "40px", // Added padding for better spacing
+        paddingBottom: "40px", // Added padding for better spacing
+        background: "linear-gradient(90deg,#AA236C 0%, #F28735 100%)",
       }}
     >
       <div className="container">
@@ -34,7 +35,8 @@ const Section3 = () => { // Renamed component to Section3
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between", // Distribute space between left and right
-            gap: "20px", // Add some space between the two divs
+            gap: "30px", // Add some space between the two divs
+            flexWrap: "wrap",
           }}
           className="pt-20 pb-50" // Keep existing padding classes if they are useful
         >
@@ -45,9 +47,17 @@ const Section3 = () => { // Renamed component to Section3
               display: "flex",
               justifyContent: "center", // Horizontally center content
               alignItems: "center", // Vertically center content (optional)
+              textAlign: "center",
+              marginBottom: "30px",
             }}
           >
-            <h3 style={{ margin: 0, fontSize: "44px", fontWeight: "bold" }}> {/* Adjusted styling for visibility */}
+            <h3 style={{
+              margin: 0,
+              fontSize: "clamp(24px, 4vw, 44px)",
+              fontWeight: "bold",
+              color: "white",
+              lineHeight: "1.3"
+            }}> {/* Adjusted styling for visibility */}
               Check your eligibility Now
             </h3>
           </div>
@@ -57,46 +67,67 @@ const Section3 = () => { // Renamed component to Section3
             style={{
               flex: 1, // Take up available space
               display: "flex",
-              flexDirection: "column", // Stack items vertically
+              flexDirection: { xs: "column", sm: "row" }, // Stack items vertically on mobile
               alignItems: "center", // Center items horizontally
-              gap: "10px", // Space between images and button
+              gap: "30px", // Space between images and button
+              justifyContent: "center",
             }}
           >
-            <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}> {/* Container for image-button pairs */}
+            <div style={{ display: "flex", gap: "30px", alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}> {/* Container for image-button pairs */}
               {/* Image 1 and Button 1 */}
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
-                <Image
-                  src={placeholderImage1}
-                  alt="Placeholder Image 1"
-                  width={200} // Specify width
-                  height={100} // Specify height
-                  style={{ objectFit: "cover" }} // Ensure image covers the dimensions
-                />
-                <div style={{paddingTop:"10px",paddingRight:"30px"}}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "15px" }}>
+                <div style={{ position: "relative", width: "180px", height: "90px" }}>
+                  <Image
+                    src={placeholderImage1}
+                    alt="Placeholder Image 1"
+                    fill
+                    style={{ objectFit: "cover", borderRadius: "8px" }}
+                  />
+                </div>
                 <NoSSR
-                  customStyle={customStyle}
+                  customStyle={{
+                    ...customStyle,
+                    padding: "12px 24px",
+                    fontSize: "14px",
+                    borderRadius: "25px",
+                    minWidth: "140px",
+                    textAlign: "center",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.2)"
+                  }}
                   modalState={false}
                   buttonText="Check Now"
                 />
-                </div>
               </div>
 
               {/* Image 2 and Button 2 */}
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
-                <Image
-                  src={placeholderImage2}
-                  alt="Placeholder Image 2"
-                  width={200} // Specify width
-                  height={100} // Specify height
-                  style={{ objectFit: "cover" }} // Ensure image covers the dimensions
-                />
-                <div style={{paddingTop:"10px",paddingRight:"30px"}}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "15px" }}>
+                <div style={{ position: "relative", width: "180px", height: "90px" }}>
+                  <Image
+                    src={placeholderImage2}
+                    alt="Placeholder Image 2"
+                    fill
+                    style={{ objectFit: "cover", borderRadius: "8px" }}
+                  />
+                </div>
                 <NoSSR
-                  customStyle={customStyle}
+                  customStyle={{
+                    ...customStyle,
+                    padding: "12px 24px",
+                    fontSize: "14px",
+                    borderRadius: "25px",
+                    minWidth: "140px",
+                    textAlign: "center",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.2)"
+                  }}
                   modalState={false}
                   buttonText="Check Now"
                 />
-                </div>
               </div>
             </div>
           </div>

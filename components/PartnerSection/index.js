@@ -87,11 +87,13 @@ const PartnerSection = (props) => {
   };
 
   return (
-    <section className="brand pt-110 pb-90">
+    <section className="brand pt-80 pb-60">
       <div className="container">
-        <h2 className="brand-title text-center mb-50">
+        <h2 className="brand-title text-center mb-40">
           <span>
-            <span>We're proud to work with our preferred partners</span>
+            <span style={{ fontSize: "clamp(24px, 3vw, 32px)", fontWeight: "600" }}>
+              We're proud to work with our preferred partners
+            </span>
           </span>
         </h2>
         <div className="xb-swiper-sliders brand-slider">
@@ -102,7 +104,27 @@ const PartnerSection = (props) => {
                   {partners.map((partner, pitem) => (
                     <div className="xb-swiper" key={pitem}>
                       <Link href="/">
-                        <Image src={partner.pImg} alt="" />
+                        <div style={{
+                          padding: "20px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          background: "white",
+                          borderRadius: "8px",
+                          boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+                          transition: "transform 0.3s ease",
+                          height: "120px"
+                        }}>
+                          <Image
+                            src={partner.pImg}
+                            alt=""
+                            style={{
+                              maxWidth: "100%",
+                              maxHeight: "80px",
+                              objectFit: "contain"
+                            }}
+                          />
+                        </div>
                       </Link>
                     </div>
                   ))}

@@ -79,47 +79,99 @@ const Testimonial = () => {
 
 
     return (
-        <section className="testimonial bg_img pt-130 pb-130" style={{ backgroundImage: `url(${'/images/bg/tm_bg.png'})` }}>
+        <section className="testimonial bg_img pt-100 pb-100" style={{
+            backgroundImage: `url(${'/images/bg/tm_bg.png'})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed"
+        }}>
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-4">
-                        <div className="sec-title margin-none-md mb-30-xs mb-125">
-                            {/* <h2 className="mb-70 wow skewIn">Happy Clients Reflect on Their <br />
-                                <span> Journey with Us</span></h2> */}
-                            <h2 className="mb-70 wow skewIn">
+                <div className="row">
+                    <div className="col-lg-12">
+                        <div className="sec-title text-center mb-60">
+                            <h2 style={{
+                                fontSize: "clamp(28px, 4vw, 36px)",
+                                fontWeight: "700",
+                                color: "#333",
+                                lineHeight: "1.3",
+                                marginBottom: "20px"
+                            }}>
                                 Success Stories from Clients <br />
-                                <span>Immigrating Worldwide</span>
+                                <span style={{ color: "#AA236C" }}>Immigrating Worldwide</span>
                             </h2>
-                            {/* <p>Embark on a Global Exploration: <br /> Experience Joy in 190+ Countries <br /> and Across the
-                                World</p> */}
-                            <p>
+                            <p style={{
+                                fontSize: "clamp(16px, 2.2vw, 18px)",
+                                lineHeight: "1.6",
+                                color: "#666",
+                                maxWidth: "800px",
+                                margin: "0 auto"
+                            }}>
                                 Hear from individuals who secured visas through Express Entry, Canada PNP, and other global PR pathways — with expert guidance on Canada PR requirements, eligibility, and submission.
                             </p>
                         </div>
-                        <div className="xb-testimonial__nav ul_li">
-                            <div className="tm-nav-item tm-button-prev" onClick={() => slider?.current?.slickPrev()}></div>
-                            <div className="tm-nav-item tm-button-next" onClick={() => slider?.current?.slickNext()}></div>
-                        </div>
                     </div>
-                    <div className="col-lg-8">
+                </div>
+                <div className="row">
+                    <div className="col-lg-12">
                         <div className="xb-swiper-sliders">
                             <div className="xb-carousel-inner">
                                 <div className="xb-testimonial-slider xb-swiper-container">
                                     <Slider ref={slider} {...settings}>
                                         {testimonial.map((testimonial, tsm) => (
                                             <div className="xb-testimonial" key={tsm}>
-                                                <div className="xb-item--inner text-center">
-                                                    <div className="xb-item--img">
-                                                        <Image src={logo} alt="" />
+                                                <div className="xb-item--inner text-center" style={{
+                                                    background: "white",
+                                                    borderRadius: "20px",
+                                                    padding: "40px 30px",
+                                                    margin: "0 15px",
+                                                    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+                                                    border: "1px solid rgba(170, 35, 108, 0.1)"
+                                                }}>
+                                                    <div className="xb-item--img" style={{
+                                                        marginBottom: "25px",
+                                                        width: "80px",
+                                                        height: "80px",
+                                                        margin: "0 auto 25px",
+                                                        borderRadius: "50%",
+                                                        background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        justifyContent: "center"
+                                                    }}>
+                                                        <Image src={logo} alt="" width={40} height={40} />
                                                     </div>
-                                                    <div className="xb-item--content">
-                                                        "{testimonial.Des}"
+                                                    <div className="xb-item--content" style={{
+                                                        fontSize: "clamp(16px, 2.2vw, 18px)",
+                                                        lineHeight: "1.6",
+                                                        color: "#333",
+                                                        fontStyle: "italic",
+                                                        marginBottom: "25px",
+                                                        position: "relative"
+                                                    }}>
+                                                        <span style={{
+                                                            fontSize: "clamp(24px, 3vw, 36px)",
+                                                            color: "#AA236C",
+                                                            marginRight: "5px"
+                                                        }}>"</span>
+                                                        {testimonial.Des}
+                                                        <span style={{
+                                                            fontSize: "clamp(24px, 3vw, 36px)",
+                                                            color: "#AA236C",
+                                                            marginLeft: "5px"
+                                                        }}>"</span>
                                                     </div>
                                                     <div className="xb-item--bottom">
-                                                        <div className="xb-item--ratting">
-                                                            <Image src={rating} alt="" />
+                                                        <div className="xb-item--ratting" style={{ marginBottom: "15px" }}>
+                                                            <Image src={rating} alt="" width={120} height={20} />
                                                         </div>
-                                                        <h3 className="xb-item--title">{testimonial.Title}</h3>
+                                                        <h3 className="xb-item--title" style={{
+                                                            fontSize: "clamp(18px, 2.5vw, 22px)",
+                                                            color: "#333",
+                                                            fontWeight: "600",
+                                                            margin: 0
+                                                        }}>
+                                                            {testimonial.Title}
+                                                        </h3>
                                                     </div>
                                                 </div>
                                             </div>

@@ -21,23 +21,29 @@ const Hero = () => {
       className="hero hero__style-one bg_img"
       style={{
         backgroundSize: "cover",
-        // width: 1920,
-        // height: 755,
         width: "100%",
-        height: "100%",
-        // backgroundImage: `url(${"/images/bg/full-shot-woman-taking-selfie.jpg"})`,
+        minHeight: "90vh",
         backgroundImage: `url(${"/images/bg/home_hero_image3.jpg"})`,
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-xl-6 col-lg-7">
+          <div className="col-xl-6 col-lg-7 col-md-12">
             <div className="hero__content">
               <Slide direction="up" triggerOnce={"false"} duration={1200}>
                 {/* <h1>Immigration visa <br /> <span>Consulting</span></h1> */}
-                <h1 style={{ fontSize: "50px" }}>
+                <h1 style={{
+                  fontSize: "clamp(28px, 5vw, 50px)",
+                  lineHeight: "1.2",
+                  fontWeight: "700",
+                  marginBottom: "20px"
+                }}>
                   Immigration Service
-                  <span>, Study Permit and Business Setup</span>
+                  <span style={{ display: "block", fontSize: "0.9em", color: "#666" }}>
+                    Study Permit and Business Setup
+                  </span>
                 </h1>
                 {/* <h1>
                                     Simplifying<br />
@@ -47,7 +53,12 @@ const Hero = () => {
               <Slide direction="up" triggerOnce={"false"} duration={1400}>
                 {/* <p>Expert Guidance for a
                                     Seamless Immigration Journey</p> */}
-                <p>
+                <p style={{
+                  fontSize: "clamp(16px, 2.5vw, 18px)",
+                  lineHeight: "1.6",
+                  marginBottom: "30px",
+                  color: "white"
+                }}>
                   Start your immigration journey to any country including
                   Canada, Australia, Germany, the UK, or the USA. Discover the program like 189 subclass, 190 subclass, Start up program , express entry , study permit and admission.
                 </p>
@@ -62,27 +73,38 @@ const Hero = () => {
                   {/* <li><i className="far fa-check"></i>Expert Legal Support</li>
                                     <li><i className="far fa-check"></i>Meeting Your Unique Needs</li>
                                     <li><i className="far fa-check"></i>Tailored Immigration Solutions</li> */}
-                  <li>
-                    <i className="far fa-check"></i>Eligibility for immigration from Registered Lawyer
+                  <li style={{ marginBottom: "12px", fontSize: "16px" }}>
+                    <i className="far fa-check" style={{ color: "#AA236C", marginRight: "8px" }}></i>Eligibility for immigration from Registered Lawyer
                   </li>
-                  <li>
-                    <i className="far fa-check"></i>Free Consultation and Possibility of success
+                  <li style={{ marginBottom: "12px", fontSize: "16px" }}>
+                    <i className="far fa-check" style={{ color: "#AA236C", marginRight: "8px" }}></i>Free Consultation and Possibility of success
                   </li>
-                  <li>
-                    <i className="far fa-check"></i>Updated draws and changes in all visa service
+                  <li style={{ marginBottom: "12px", fontSize: "16px" }}>
+                    <i className="far fa-check" style={{ color: "#AA236C", marginRight: "8px" }}></i>Updated draws and changes in all visa service
                   </li>
-                  <li>
-                    <i className="far fa-check"></i>Register to get connect with direct lawyer
+                  <li style={{ fontSize: "16px" }}>
+                    <i className="far fa-check" style={{ color: "#AA236C", marginRight: "8px" }}></i>Register to get connect with direct lawyer
                   </li>
                 </Slide>
               </ul>
               <Slide direction="up" triggerOnce={"false"} duration={1800}>
                 <div>
-                  <div className="btns">
+                  <div className="btns" style={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: "15px", alignItems: "center" }}>
                     {/* <Link onClick={ClickHandler} className="thm-btn" href="/contact">Book Appointment</Link>
                                         <Link onClick={ClickHandler} className="thm-btn thm-btn--white" href="/about">Read Story</Link> */}
                     <NoSSR
-                      customStyle={customStyle}
+                      customStyle={{
+                        ...customStyle,
+                        padding: "15px 30px",
+                        fontSize: "16px",
+                        borderRadius: "30px",
+                        minWidth: "200px",
+                        textAlign: "center",
+                        border: "none",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                        boxShadow: "0 4px 15px rgba(170, 35, 108, 0.3)"
+                      }}
                       modalState={false}
                       buttonText="Book Free Appointment"
                     />
