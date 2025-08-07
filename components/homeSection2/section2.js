@@ -41,8 +41,7 @@ const Hero = () => {
                 </p>
 
                 <p className="pl-100 pr-100 pt-10" style={{ color: "#120f0f" }}>
-                  With over 10 years of industry experience and a global presence
-                  spanning 20+ offices, Go Abroad Migration has earned a
+                  Go Abroad Migration has earned a
                   reputation for excellence in delivering both immigrant and
                   non-immigrant visa solutions.
                 </p>
