@@ -1,44 +1,49 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import Image from "next/image";
+import Link from "next/link";
 
 const CardsSection = () => {
     const cardsData = [
         {
             id: 1,
             title: "Canada Immigration",
-            description: "Expert guidance for Canadian PR, study permits, and work visas with MARA-certified consultants.",
+            description: "The Subclass 190 visa is a points-tested permanent residency visa for skilled workers nominated by an Australian state or territory. It allows you to live and work in Australia as a permanent resident.",
             image: "/images/cards/civil_engineer.jpg",
             alt: "Canada immigration services",
-            overlayText: "Discover Canada",
-            overlayColor: "from-blue-600 to-purple-600"
+            overlayText: "Subclass 190 - skilled Nominated Visa",
+            overlayColor: "from-blue-600 to-purple-600",
+            href: "/australia/Skilled-Nominated-190"
         },
         {
             id: 2,
             title: "Australia Migration",
-            description: "Professional assistance for Australian visas including skilled migration and student visas.",
+            description: "The Subclass 491 visa is a temporary, points-tested visa for skilled workers nominated by a regional area in Australia. It allows you to live, work, and study in designated regional areas for up to 5 years, with a pathway to permanent residency.",
             image: "/images/cards/engineer.jpg",
             alt: "Australia migration services",
-            overlayText: "Explore Australia",
-            overlayColor: "from-green-600 to-teal-600"
+            overlayText: "Australia - Subclass 491",
+            overlayColor: "from-green-600 to-teal-600",
+            href: "/australia/Worked-Regional-Provisional"
         },
         {
             id: 3,
             title: "Student Visas",
-            description: "Comprehensive support for student visas to top educational institutions worldwide.",
+            description: "The Canada Family Sponsorship Visa allows Canadian citizens and permanent residents to sponsor eligible family members to immigrate to Canada. It helps reunite families by granting permanent residency to sponsored relatives.",
             image: "/images/cards/family.jpg",
             alt: "Student visa services",
-            overlayText: "Study Abroad",
-            overlayColor: "from-orange-600 to-red-600"
+            overlayText: "Canada - Family Sponsorship",
+            overlayColor: "from-orange-600 to-red-600",
+            href: "/canada/Family-Sponsorship"
         },
         {
             id: 4,
             title: "Business Setup",
-            description: "End-to-end business setup services in Canada, Australia, and other countries.",
+            description: "The Canada Express Entry Visa is a points-based immigration system for skilled workers seeking permanent residency. It manages applications through programs like the Federal Skilled Worker, Canadian Experience Class, and Federal Skilled Trades.",
             image: "/images/cards/express_entry.jpg",
             alt: "Business setup services",
-            overlayText: "Grow Your Business",
-            overlayColor: "from-indigo-600 to-blue-600"
+            overlayText: "Canada Express Entry",
+            overlayColor: "from-indigo-600 to-blue-600",
+            href: "/canada/Express-Entry"
         }
     ];
 
@@ -94,7 +99,7 @@ const CardsSection = () => {
                                             <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
                                             {/* Modern Overlay Text */}
-                                            <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                            <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-100 transition-all duration-500">
                                                 <div className="bg-white rounded-xl p-6 text-center shadow-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300">
                                                     <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2 tracking-tight">
                                                         {card.overlayText}
@@ -115,15 +120,18 @@ const CardsSection = () => {
                                     </div>
 
                                     <div className="card-content">
+                                        <b>{card.overlayText}</b>
+                                        <br />
                                         <p className="text-gray-700 leading-relaxed mb-4">
                                             {card.description}
                                         </p>
-                                        <button
+                                        <Link
                                             className="grd-btn"
                                             aria-label={`Learn more about ${card.title}`}
+                                            href={card.href}
                                         >
                                             Learn More
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </Slide>

@@ -56,7 +56,8 @@ const Scrollbar = () => {
             backgroundColor: "#47e621",
             // backgroundColor: "#AA236C",
           }}
-          aria-label="add"
+          aria-label="WhatsApp"
+          onClick={handleWhatsAppClick}
         >
           <WhatsApp sx={{ color: "white" }} fontSize="large" />
         </Fab>
@@ -69,7 +70,8 @@ const Scrollbar = () => {
             zIndex: " 9999",
           }}
           color="primary"
-          aria-label="add"
+          aria-label="Phone"
+          onClick={handlePhoneClick}
         >
           <Phone fontSize="large" />
         </Fab>
