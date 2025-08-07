@@ -18,8 +18,8 @@ const Scrollbar = () => {
 
   const handleWhatsAppClick = () => {
     // Remove '+' and spaces from number for WhatsApp
-    const cleanNumber = whatsappNumber.replace(/[+ ]/g, '');
-    const whatsappUrl = `https://wa.me/${cleanNumber}`;
+    // const cleanNumber = whatsappNumber.replace(/[+ ]/g, '');
+    const whatsappUrl = `https://wa.me/${whatsappNumber}`;
     window.open(whatsappUrl, '_blank');
   };
 
