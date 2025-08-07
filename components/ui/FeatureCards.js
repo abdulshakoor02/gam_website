@@ -29,7 +29,7 @@ export default function FeatureCards() {
     <div className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold text-gray-900 sm:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function FeatureCards() {
           >
             Our Services
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,8 +58,8 @@ export default function FeatureCards() {
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
               <div className="relative h-48">
-                <img 
-                  src={feature.image} 
+                <img
+                  src={feature.image}
                   alt={feature.title}
                   className="w-full h-full object-cover"
                 />

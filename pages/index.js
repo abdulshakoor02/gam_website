@@ -17,6 +17,7 @@ import NewsLatter from "../components/NewsLatter/NewsLatter";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/footer/Footer";
 import Scrollbar from "../components/scrollbar/scrollbar";
+import CardsSection from "../components/homeSection2/CardsSection";
 
 const HomePage = () => {
   return (
@@ -30,6 +31,7 @@ const HomePage = () => {
         <ServiceSection />
         <About />
         <Hero1 />
+        <CardsSection />
         <FunFactSection />
         {/* <CountrySection /> */}
         {/*  <TeamSection /> */}

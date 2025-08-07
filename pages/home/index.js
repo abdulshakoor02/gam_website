@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import Header from "../../components/header/Header";
 import Hero from "../../components/hero/hero";
 import Hero1 from "../../components/homeSection1/hero";
-import FeatureCards from "../../components/ui/FeatureCards";
 import PartnerSection from "../../components/PartnerSection";
 import ServiceSection from "../../components/ServiceSection/ServiceSection";
 import About from "../../components/about/about";
@@ -25,7 +24,6 @@ const HomePage = () => {
         <Hero />
         {/* <PartnerSection /> */}
         <Hero1 />
-        <FeatureCards />
         <ServiceSection />
         <About />
         <FunFactSection />
