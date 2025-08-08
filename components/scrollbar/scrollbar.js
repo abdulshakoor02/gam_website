@@ -73,7 +73,7 @@ const Scrollbar = () => {
               },
             },
             position: "fixed",
-            top: 470,
+            top: 350,
             left: 0,
             zIndex: " 9999",
             backgroundColor: "#47e621",

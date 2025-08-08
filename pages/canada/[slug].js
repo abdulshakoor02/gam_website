@@ -115,7 +115,7 @@ const ServiceSinglePage = (props) => {
           </p>
           <div className="row align-items-center mt-10">
             <div className="col-lg-5 mt-30">
-              <Image src={eImg1} alt="" />
+              <Image src={ServiceDetails?.img} alt="" />
             </div>
             <div className="col-lg-6 mt-30">
               <p>

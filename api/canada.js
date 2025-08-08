@@ -2,10 +2,19 @@ import swIcon1 from "/public/images/icon/sv_01.svg";
 import swIcon2 from "/public/images/icon/sv_02.svg";
 import swIcon3 from "/public/images/icon/sv_03.svg";
 import swIcon4 from "/public/images/icon/sv_04.svg";
+import eImg1 from "/public/images/visa/canada1.png";
+import eImg2 from "/public/images/visa/canada2.jpg";
+import eImg3 from "/public/images/visa/canada3.jpg";
+import eImg4 from "/public/images/visa/canada4.jpg";
+import eImg5 from "/public/images/visa/canada5.jpg";
+import eImg6 from "/public/images/visa/canada6.jpg";
+import eImg7 from "/public/images/visa/canada7.jpg";
+import eImg8 from "/public/images/visa/canada8.jpg";
 
 const Canada = [
   {
     Id: "1",
+    img: eImg1,
     sIcon: swIcon1,
     title: "Canada PR via Express Entry",
     slug: "Express-Entry",
@@ -38,6 +47,7 @@ Whether you're seeking better career opportunities, quality education, or an enh
   {
     Id: "2",
     sIcon: swIcon2,
+    img: eImg2,
     iconColor: "color2",
     title: "Pilot Program",
     slug: "pilot_program",
@@ -74,6 +84,7 @@ These pilot programs are tailored to support Canada's diverse economic and demog
   {
     Id: "3",
     sIcon: swIcon2,
+    img: eImg3,
     iconColor: "color2",
     title: "Provincial Nominee Program",
     slug: "PNP",
@@ -91,6 +102,7 @@ These pilot programs are tailored to support Canada's diverse economic and demog
   {
     Id: "4",
     sIcon: swIcon3,
+    img: eImg4,
     iconColor: "color3",
     title: "Student Visa",
     slug: "Student-Visa",
@@ -110,6 +122,7 @@ Studying in Canada offers not only a world-class education but also a multicultu
   {
     Id: "5",
     sIcon: swIcon4,
+    img: eImg5,
     iconColor: "color4",
     title: "Visit Visa",
     slug: "Visit-Visa",
@@ -128,6 +141,7 @@ Canada is known for its breathtaking natural beauty, multicultural cities, and w
   {
     Id: "6",
     sIcon: swIcon4,
+    img: eImg6,
     iconColor: "color4",
     title: "Family Sponsorship",
     slug: "Family-Sponsorship",
@@ -150,6 +164,7 @@ Canada is known for its breathtaking natural beauty, multicultural cities, and w
   {
     Id: "7",
     sIcon: swIcon4,
+    img: eImg7,
     iconColor: "color4",
     title: "ICT Program",
     slug: "ICT-Program",
@@ -170,8 +185,9 @@ Canada is known for its breathtaking natural beauty, multicultural cities, and w
   `,
   },
   {
-    Id: "7",
+    Id: "8",
     sIcon: swIcon4,
+    img: eImg8,
     iconColor: "color4",
     title: "Start-up Visa",
     slug: "Start-up-Visa",
