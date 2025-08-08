@@ -9,8 +9,8 @@ import { Toaster } from "react-hot-toast";
 const NoSSR = dynamic(() => import("../modal/modal"), { ssr: false });
 
 const Scrollbar = () => {
-  const phoneNumber = "+971504916720"; // UAE phone number format
-  const whatsappNumber = "+971504916720"; // Same number for WhatsApp
+  const phoneNumber = "+97151234352"; // UAE phone number format
+  const whatsappNumber = "+97155135325"; // Same number for WhatsApp
 
   const handlePhoneClick = () => {
     window.location.href = `tel:${phoneNumber}`;

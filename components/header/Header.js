@@ -77,7 +77,7 @@ const Header = (props) => {
           <div className="header__top ul_li_between">
             <div className="header__top-cta">
               <Image src={icon1} alt="" />
-              <span>Help Desk :</span> +971 504 916 720
+              <span>Help Desk :</span> +971 512 345 689
             </div>
             <ul className="header__top-info ul_li">
               <li>

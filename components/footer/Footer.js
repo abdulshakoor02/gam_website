@@ -34,7 +34,7 @@ const Footer = (props) => {
                                     <span style={{ marginRight: "8px" }}>
                                         <Image src={icon1} alt="" width={16} height={16} />
                                     </span>
-                                    +971 504 916 720
+                                    +971 512 345 678
                                 </li>
                                 <li className="ul_li" style={{
                                     fontSize: "clamp(14px, 2vw, 16px)"
