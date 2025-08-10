@@ -6,7 +6,7 @@ import icon3 from "/public/images/icon/location.svg";
 import icon4 from "/public/images/icon/search.svg";
 import icon5 from "/public/images/icon/us_flag.png";
 import icon6 from "/public/images/icon/arrow_down.svg";
-import logo from "/public/images/logo/gam_logo.jpeg";
+import logo from "/public/images/logo/gam_logo.png";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -102,7 +102,15 @@ const Header = (props) => {
           <div className="header__inner ul_li_between">
             <div className="header__logo">
               <Link onClick={ClickHandler} href="/">
-                <Image src={logo} alt="" height={100} width={120} />
+                <Image
+                  src={logo}
+                  alt="Go Abroad Migration Logo"
+                  tabIndex={-1}
+                  height={100}
+                  width={120}
+                  className="logo-image"
+                  style={{ outline: 'none' }}
+                />
               </Link>
             </div>
             <div className="main-menu__wrap ul_li navbar navbar-expand-lg">
@@ -644,7 +652,12 @@ const Header = (props) => {
             ></div>
             <div className="xb-logo-mobile xb-hide-xl">
               <Link onClick={ClickHandler} href="/" rel="home">
-                <Image src={logo} alt="" />
+                <Image
+                  src={logo}
+                  alt="Go Abroad Migration Logo"
+                  className="mobile-logo-image"
+                  style={{ display: 'block' }}
+                />
               </Link>
             </div>
             <div className="xb-header-mobile-search xb-hide-xl">
