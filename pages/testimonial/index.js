@@ -6,13 +6,13 @@ import Scrollbar from '../../components/scrollbar/scrollbar'
 import ContactSection from '../../components/ContactSection';
 import NewsLatter from '../../components/NewsLatter/NewsLatter';
 import Footer from '../../components/footer/Footer';
-import tsm1 from '/public/images/testimonial/avatar1.png'
-import tsm2 from '/public/images/testimonial/avatar2.png'
-import tsm3 from '/public/images/testimonial/avatar3.png'
-import tsm4 from '/public/images/testimonial/avatar4.png'
-import tsm5 from '/public/images/testimonial/avatar5.png'
-import tsm6 from '/public/images/testimonial/avatar6.png'
-import tsm7 from '/public/images/testimonial/avatar7.png'
+import tsm1 from '/public/images/testimonial/avatar1.jpg'
+import tsm2 from '/public/images/testimonial/avatar2.jpg'
+import tsm3 from '/public/images/testimonial/avatar3.jpg'
+import tsm4 from '/public/images/testimonial/avatar4.jpg'
+import tsm5 from '/public/images/testimonial/avatar5.jpg'
+import tsm6 from '/public/images/testimonial/avatar6.jpg'
+import tsm7 from '/public/images/testimonial/avatar7.jpg'
 import Image from 'next/image';
 const MasonryWrapper = dynamic(() => import('../../components/MasonryWrapper/MasonryWrapper'), { ssr: false });
 
