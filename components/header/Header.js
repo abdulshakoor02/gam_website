@@ -580,8 +580,25 @@ const Header = (props) => {
                 <div
                   className="xb-nav-mobile-button"
                   onClick={() => setMobailState(!mobailActive)}
+                  style={{
+                    background: 'linear-gradient(135deg, #AA236C 0%, #F28735 100%)',
+                    border: 'none',
+                    borderRadius: '8px',
+                    padding: '8px 12px',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.05)';
+                    e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                  }}
                 >
-                  <i className="fal fa-bars"></i>
+                  <i className="fal fa-bars" style={{ color: 'white', fontSize: '18px' }}></i>
                 </div>
               </div>
             </div>
@@ -649,29 +666,112 @@ const Header = (props) => {
             <div
               className="xb-menu-close xb-hide-xl xb-close"
               onClick={() => setMobailState(!mobailActive)}
-            ></div>
-            <div className="xb-logo-mobile xb-hide-xl">
+              style={{
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                background: 'linear-gradient(135deg, #AA236C 0%, #F28735 100%)',
+                border: 'none',
+                borderRadius: '50%',
+                width: '40px',
+                height: '40px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                zIndex: '1000',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'scale(1.1)';
+                e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'scale(1)';
+                e.target.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+              }}
+            >
+              <i className="fas fa-times" style={{ color: 'white', fontSize: '16px' }}></i>
+            </div>
+            <div className="xb-logo-mobile xb-hide-xl" style={{
+              padding: '20px 0',
+              borderBottom: '1px solid #f0f0f0',
+              marginBottom: '20px'
+            }}>
               <Link onClick={ClickHandler} href="/" rel="home">
                 <Image
                   src={logo}
                   alt="Go Abroad Migration Logo"
                   className="mobile-logo-image"
-                  style={{ display: 'block' }}
+                  style={{
+                    display: 'block',
+                    maxWidth: '150px',
+                    height: 'auto'
+                  }}
                 />
               </Link>
             </div>
-            <div className="xb-header-mobile-search xb-hide-xl">
-              <form role="search" onSubmit={SubmitHandler}>
+            <div className="xb-header-mobile-search xb-hide-xl" style={{
+              padding: '0 20px 20px',
+              borderBottom: '1px solid #f0f0f0',
+              marginBottom: '20px'
+            }}>
+              <form role="search" onSubmit={SubmitHandler} style={{ position: 'relative' }}>
                 <input
                   type="text"
                   placeholder="Search..."
                   name="s"
                   className="search-field"
+                  style={{
+                    width: '100%',
+                    padding: '12px 45px 12px 15px',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '25px',
+                    fontSize: '14px',
+                    outline: 'none',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = '#AA236C';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(170, 35, 108, 0.1)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = '#e0e0e0';
+                    e.target.style.boxShadow = 'none';
+                  }}
                 />
-                <button type="submit" className="search-submit"></button>
+                <button
+                  type="submit"
+                  className="search-submit"
+                  style={{
+                    position: 'absolute',
+                    right: '5px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'linear-gradient(135deg, #AA236C 0%, #F28735 100%)',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '35px',
+                    height: '35px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'translateY(-50%) scale(1.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'translateY(-50%) scale(1)';
+                  }}
+                >
+                  <i className="fas fa-search" style={{ color: 'white', fontSize: '12px' }}></i>
+                </button>
               </form>
             </div>
-            <nav className="xb-header-nav">
+            <nav className="xb-header-nav" style={{ padding: '0 20px' }}>
               <MobileMenu />
             </nav>
           </div>
@@ -679,6 +779,17 @@ const Header = (props) => {
         <div
           className="xb-header-menu-backdrop"
           onClick={() => setMobailState(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backdropFilter: 'blur(5px)',
+            zIndex: '999',
+            transition: 'all 0.3s ease'
+          }}
         ></div>
       </div>
 

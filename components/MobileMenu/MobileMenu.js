@@ -97,19 +97,79 @@ const MobileMenu = () => {
 
   const renderItems = (items) => {
     return (
-      <ul className="xb-menu-primary clearfix">
+      <ul className="xb-menu-primary clearfix" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
         {items.map((item) => (
-          <li key={item.id} className={openMap[item.id] ? 'active' : ''}>
+          <li key={item.id} className={openMap[item.id] ? 'active' : ''} style={{ marginBottom: '5px' }}>
             {item.submenu ? (
               <>
-                <button type="button" className="menu-toggle" onClick={() => toggle(item.id)}>
-                  {item.title}
-                  <i className={`fas ${openMap[item.id] ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                <button
+                  type="button"
+                  className="menu-toggle"
+                  onClick={() => toggle(item.id)}
+                  style={{
+                    width: '100%',
+                    padding: '15px 20px',
+                    background: 'linear-gradient(135deg, #AA236C 0%, #F28735 100%)',
+                    border: 'none',
+                    borderRadius: '10px',
+                    color: 'white',
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'translateX(5px)';
+                    e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'translateX(0)';
+                    e.target.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                  }}
+                >
+                  <span>{item.title}</span>
+                  <i className={`fas ${openMap[item.id] ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ fontSize: '12px' }}></i>
                 </button>
-                {openMap[item.id] && <div className="subMenu">{renderItems(item.submenu)}</div>}
+                {openMap[item.id] && (
+                  <div className="subMenu" style={{
+                    marginTop: '10px',
+                    paddingLeft: '20px',
+                    borderLeft: '2px solid #f0f0f0'
+                  }}>
+                    {renderItems(item.submenu)}
+                  </div>
+                )}
               </>
             ) : (
-              <Link href={item.link} onClick={ClickHandler}>{item.title}</Link>
+              <Link
+                href={item.link}
+                onClick={ClickHandler}
+                style={{
+                  display: 'block',
+                  padding: '12px 20px',
+                  color: '#333',
+                  textDecoration: 'none',
+                  borderRadius: '8px',
+                  transition: 'all 0.3s ease',
+                  borderLeft: '3px solid transparent'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = '#f8f9fa';
+                  e.target.style.borderLeftColor = '#AA236C';
+                  e.target.style.transform = 'translateX(5px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.borderLeftColor = 'transparent';
+                  e.target.style.transform = 'translateX(0)';
+                }}
+              >
+                {item.title}
+              </Link>
             )}
           </li>
         ))}
