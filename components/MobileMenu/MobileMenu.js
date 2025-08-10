@@ -1,182 +1,123 @@
-import React, { Fragment, useState } from 'react';
-import List from "@mui/material/List";
-import ListItem from "@mui/material/List";
-import Collapse from "@mui/material/Collapse";
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 const menus = [
-    {
-        id: 1,
-        title: 'Home',
-        link: '/home',
+  { id: 'home', title: 'Home', link: '/' },
+  {
+    id: 'services',
+    title: 'Services',
+    submenu: [
+      {
+        id: 'canada',
+        title: 'Canada Visa',
         submenu: [
-            {
-                id: 11,
-                title: 'Immigration',
-                link: '/home'
-            },
-            {
-                id: 12,
-                title: 'Studient Visa',
-                link: '/home-studient-visa'
-            },
-            {
-                id: 13,
-                title: 'Travel Agency',
-                link: '/home-travel-agency'
-            }
+          { id: 'express-entry', title: 'Express Entry', link: '/canada/Express-Entry' },
+          {
+            id: 'pilot',
+            title: 'Pilot Program',
+            submenu: [
+              { id: 'aipp', title: 'AIPP', link: '/pilot/aipp' },
+              { id: 'rnip', title: 'RNIP', link: '/pilot/rnip' },
+              { id: 'mcdii', title: 'MCDII', link: '/pilot/mcdii' }
+            ]
+          },
+          {
+            id: 'pnp',
+            title: 'Provincial Nomination Program',
+            submenu: [
+              { id: 'alberta', title: 'Alberta PNP', link: '/pnp/alberta' },
+              { id: 'bc', title: 'British Columbia PNP', link: '/pnp/bc' },
+              { id: 'manitoba', title: 'Manitoba PNP', link: '/pnp/manitoba' },
+              { id: 'nb', title: 'New Brunswick PNP', link: '/pnp/nb' },
+              { id: 'ns', title: 'Nova Scotia PNP', link: '/pnp/ns' },
+              { id: 'ontario', title: 'Ontario PNP', link: '/pnp/ontario' },
+              { id: 'pei', title: 'Prince Edward Island PNP', link: '/pnp/pei' },
+              { id: 'sas', title: 'Saskatchewan PNP', link: '/pnp/sas' }
+            ]
+          },
+          { id: 'student-visa', title: 'Student Visa', link: '/canada/Student-Visa' },
+          { id: 'visit-visa', title: 'Visit Visa', link: '/canada/Visit-Visa' },
+          { id: 'family-sponsorship', title: 'Family Sponsorship', link: '/canada/Family-Sponsorship' },
+          {
+            id: 'business',
+            title: 'Business Program',
+            submenu: [
+              { id: 'ict', title: 'ICT Program', link: '/canada/ICT-Program' },
+              { id: 'startup', title: 'Start-up Visa', link: '/canada/Start-up-Visa' }
+            ]
+          }
         ]
-    },
-    {
-        id: 3,
-        title: 'Pages',
-        link: '/',
+      },
+      {
+        id: 'australia',
+        title: 'Australia Visa',
         submenu: [
-            {
-                id: 31,
-                title: 'Services',
-                link: '/services'
-            },
-            {
-                id: 3222,
-                title: 'Service Details',
-                link: '/service-single/Tourist-Visa'
-            },
-            {
-                id: 322,
-                title: 'Coaching',
-                link: '/coaching'
-            },
-            {
-                id: 323,
-                title: 'Coaching Details',
-                link: '/coaching-single/Take-IELTS'
-            },
-            {
-                id: 33,
-                title: 'Visa',
-                link: '/visa'
-            },
-            {
-                id: 34,
-                title: 'Visa Details',
-                link: '/visa-single/Commercial-Visa'
-            },
-            {
-                id: 345,
-                title: 'Team',
-                link: '/team'
-            },
-            {
-                id: 3454,
-                title: 'Team Details',
-                link: '/team-single/Esther-Howard'
-            },
-            {
-                id: 35,
-                title: 'Testimonials',
-                link: '/testimonial'
-            },
-            {
-                id: 36,
-                title: 'FAQ',
-                link: '/faq'
-            },
-            {
-                id: 37,
-                title: '404',
-                link: '/404'
-            }
+          { id: 'skilled-189', title: 'Skilled Independent 189', link: '/australia/Skilled-Independent-189' },
+          { id: 'skilled-190', title: 'Skilled Nominated 190', link: '/australia/Skilled-Nominated-190' },
+          { id: 'regional-491', title: 'Skilled Work Regional Provisional 491', link: '/australia/Worked-Regional-Provisional' },
+          { id: 'global-858', title: 'Global Talent Visa 858', link: '/australia/Global-Talent-Visa' },
+          { id: 'spouse', title: 'Spouse Dependent Visa', link: '/australia/Spouse-Dependent-Visa' },
+          { id: 'student', title: 'Student Visa', link: '/australia/Student-Visa' },
+          { id: 'visit', title: 'Visit Visa', link: '/australia/Visit-Visa' }
         ]
-    },
-    {
-        id: 4,
-        title: 'About Us',
-        link: '/about',
-    }, {
-        id: 5,
-        title: 'Country',
-        link: '/country',
-        submenu: [
-            {
-                id: 51,
-                title: 'Country',
-                link: '/country'
-            },
-            {
-                id: 52,
-                title: 'Country Details',
-                link: '/country-single/Australia'
-            }
-        ]
-    },
-    {
-        id: 6,
-        title: 'Blog',
-        link: '/blog',
-        submenu: [
-            {
-                id: 61,
-                title: 'Blog',
-                link: '/blog'
-            },
-            {
-                id: 62,
-                title: 'Blog Details',
-                link: '/blog-single/Cultural-adjustment-thriving-in-a-new-country'
-            },
-        ]
-    },
-    {
-        id: 88,
-        title: 'Contact',
-        link: '/contact',
-    }
-
-
-]
+      }
+    ]
+  },
+  {
+    id: 'nursing',
+    title: 'Nursing',
+    submenu: [
+      { id: 'child-care', title: 'Child Care Support', link: '/nursing/Child-Care' },
+      { id: 'home-care', title: 'Home Care Support', link: '/nursing/support-worker' }
+    ]
+  },
+  { id: 'about', title: 'About us', link: '/about' },
+  { id: 'testimonials', title: 'Testimonials', link: '/testimonial' },
+  {
+    id: 'blog',
+    title: 'Blog',
+    submenu: [
+      { id: 'blog-main', title: 'Blog', link: '/blog' },
+      { id: 'blog-details', title: 'Blog Details', link: '/blog-single/Cultural-adjustment-thriving-in-a-new-country' }
+    ]
+  },
+  { id: 'contact', title: 'Contact', link: '/contact' }
+];
 
 const MobileMenu = () => {
+  const [openMap, setOpenMap] = useState({});
 
-    const [openId, setOpenId] = useState(0);
+  const toggle = (key) => {
+    setOpenMap((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
+  const ClickHandler = () => {
+    window.scrollTo(10, 0);
+  };
 
+  const renderItems = (items) => {
     return (
-        <ul className="xb-menu-primary clearfix">
-            {menus.map((item, mn) => {
-                return (
-                    <ListItem className={item.id === openId ? 'active' : null} key={mn}>
-                        {item.submenu ?
-                            <Fragment>
-                                <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
-                                    <i className={`fas ${item.id === openId ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-                                </p>
-                                <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
-                                    <List className="subMenu">
-                                        <Fragment>
-                                            {item.submenu.map((submenu, i) => {
-                                                return (
-                                                    <ListItem key={i}>
-                                                        <Link onClick={ClickHandler} className="active"
-                                                            href={submenu.link}>{submenu.title}</Link>
-                                                    </ListItem>
-                                                )
-                                            })}
-                                        </Fragment>
-                                    </List>
-                                </Collapse>
-                            </Fragment>
-                            : <Link className="active"
-                                href={item.link}>{item.title}</Link>
-                        }
-                    </ListItem>
-                )
-            })}
-        </ul>
-    )
-}
+      <ul className="xb-menu-primary clearfix">
+        {items.map((item) => (
+          <li key={item.id} className={openMap[item.id] ? 'active' : ''}>
+            {item.submenu ? (
+              <>
+                <button type="button" className="menu-toggle" onClick={() => toggle(item.id)}>
+                  {item.title}
+                  <i className={`fas ${openMap[item.id] ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                </button>
+                {openMap[item.id] && <div className="subMenu">{renderItems(item.submenu)}</div>}
+              </>
+            ) : (
+              <Link href={item.link} onClick={ClickHandler}>{item.title}</Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  return renderItems(menus);
+};
 
 export default MobileMenu;
